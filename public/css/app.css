@@ -1,0 +1,18 @@
+*, html {
+    margin:0;
+    padding:0;  
+}
+a {
+    color: #f82249;
+    transition: 0.5s;
+}
+
+#header {
+    background: rgba(6, 12, 34, 0.98);
+    height: 70px;
+    padding: 15px 0;
+    transition: all 0.5s;
+}
+.pull-left {
+    float: left;
+}

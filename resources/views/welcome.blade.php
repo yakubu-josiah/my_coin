@@ -25,6 +25,9 @@
 
 <link href="https://mca-official.live/assets/new/style.css" rel="stylesheet">
 
+<link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" >
+<script type="text/javascript" src="{{ asset('js/app.js') }}" defer></script>
+
 <style>
     #intro {
     width: 100%;
@@ -361,37 +364,37 @@ $(document).ready(function() {
     // timestampa();
 });
 
-function timestamp(){
-    $.ajax({
-        url : 'https://mca-official.live/mainsite/current_time',
-        method: 'GET',
-        success: function(data){
-            // console.log(data);
-            $('.current').html(data);
-        }
-    })
-}
+// function timestamp(){
+//     $.ajax({
+//         url : 'https://mca-official.live/mainsite/current_time',
+//         method: 'GET',
+//         success: function(data){
+//             // console.log(data);
+//             $('.current').html(data);
+//         }
+//     })
+// }
     
     
-function timestampa(){
-    $.ajax({
-        url : 'https://mca-official.live/mainsite/auction_times',
-        method: 'GET',
-        success: function(data){
-            console.log(data);
-            if(data == 0){
-                $('.at').html('Open Now');
-            }
-            else if(data == 3){
-                $('.at').html('Tomorrow ');
-            }
-            else{
-             $('.at').html(data);
-                
-            }
-        }
-    })
-}
+// function timestampa(){
+//     $.ajax({
+//         url : 'https://mca-official.live/mainsite/auction_times',
+//         method: 'GET',
+//         success: function(data){
+//                 console.log(data);
+//                 if(data == 0){
+//                     $('.at').html('Open Now');
+//                 }
+//                 else if(data == 3){
+//                     $('.at').html('Tomorrow ');
+//                 }
+//                 else{
+//                  $('.at').html(data);
+                    
+//                 }
+//             }
+//         })
+//     }
 </script>
 
 
