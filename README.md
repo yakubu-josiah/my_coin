@@ -8,17 +8,18 @@ My Coin Auction is a fast growing online platform that enables you to participat
 ## Development
 
 - This was built using [composer create-project laravel](https://laravel.com/docs/9.x/installation).
-- [Laravel ui](https://laravel.com/docs/9.x/pagination#using-bootstrap) and the [Bootstrap-ui] was used to install scaffolding bootstrap.
+- [Laravel ui](https://laravel.com/docs/9.x/pagination#using-bootstrap) and the [Bootstrap-ui](https://laravel.com/docs/9.x/installation).
+- [Laravel ui](https://laravel.com/docs/9.x/pagination#using-bootstrap) was used to install scaffolding bootstrap.
 - Added [node](https://laravel.com/docs/session) dependencies and [built](https://docs.soketi.app/) it's develoment.
 
 
 ### Build and Deploy
 
-- **[$php artisan serve:](https:"#") starts the sever on the localhost port**
-- **[Created a database to interact with Models created](https://tighten.co)**
-- **[Used simple and expressive methods to define URI's routing](https://kirschbaumdevelopment.com)**
-- **[Schemas builder method used to configure mysql DB connection](https://64robots.com)**
-- **[Usage of the CSRf protection unauthorized from commands that are performed on behalf of an authenticated user](https://cubettech.com)**
+- **[$php artisan serve:](https:/) starts the sever on the localhost port**
+- **[Created a database to interact with Models created](https:/)**
+- **[Used simple and expressive methods to define URI's routing](https:/)**
+- **[Schemas builder method used to configure mysql DB connection](https:/)**
+- **[Usage of the CSRf protection unauthorized from commands that are performed on behalf of an authenticated user](https:/)**
 
 
 
