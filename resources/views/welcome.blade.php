@@ -8,22 +8,40 @@
         <meta content="my coin auction login mca mca2022 new mca mycoin Auction" name="keywords">
         <meta content="" name="description">
 
-        <link href="https://mca-official.live/assets/new/img/favicon.png" rel="icon">
-        <link href="https://mca-official.live/assets/new/img/apple-touch-icon.png" rel="apple-touch-icon">
+        
         <meta name="google-site-verification" content="bA6-r8vyORyz1tc5IkPbdqVHTMV4NsElK8qQAWQM7ZU" />
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
         <link href="assets/new/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/duotone.css" integrity="sha384-R3QzTxyukP03CMqKFe0ssp5wUvBPEyy9ZspCB+Y01fEjhMwcXixTyeot+S40+AjZ" crossorigin="anonymous"/>
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/fontawesome.css" integrity="sha384-eHoocPgXsiuZh+Yy6+7DsKAerLXyJmu2Hadh4QYyt+8v86geixVYwFqUvMU8X90l" crossorigin="anonymous"/>
-        <link href="https://mca-official.live/assets/new/font-awesome.min.css" rel="stylesheet">
-        <link href="https://mca-official.live/assets/new/animate.min.css" rel="stylesheet">
-        <link href="https://mca-official.live/assets/new/venobox.css" rel="stylesheet">
-        <link href="https://mca-official.live/assets/new/owl.carousel.min.css" rel="stylesheet">
-
-        {{-- <link href="https://mca-official.live/assets/new/style.css" rel="stylesheet"> --}}
-
+        
+        
+        <link href="{{ asset('Icons/apple-touch-icon.png') }}" rel="apple-touch-icon">
+        <link href="{{ asset('Icons/favicon.png') }}" rel="icon">
+        <link href="{{ asset('css/animations.css') }}" rel="stylesheet" type="text/css" >
         <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" >
+        <link href="{{ asset('css/newFonts.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/venobox.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/owlCarousel.min.css') }}" rel="stylesheet">
+
+        {{-- 
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Best P2P Site In South Africa" />
+        <meta name="keywords" content=""/>
+        <meta name="author" content=""/>
+        <link href="{{ asset('Icons/favicon.png') }}" rel="icon">
+        <link rel="stylesheet" href="{{ asset('css/fontawesome-all.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/animate.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/vendor.css') }}">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        
+        
+        --}}
+
         <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" >
         <script type="text/javascript" src="{{ asset('js/app.js') }}" defer></script>
 
@@ -44,8 +62,8 @@
                         <li><a href="#schedule">Schedule</a></li>
                         <li><a href="#faq">Faq</a></li>
                         <li><a href="testimonial">Testimonials</a></li>
-                        <li><a href="https://mca-official.live/signup">Sign up</a></li>
-                        <li class="buy-tickets"><a href="https://mca-official.live/signin">Login</a></li>
+                        <li><a href="{{ route('Register.signUp') }}">Sign up</a></li>
+                        <li class="buy-tickets"><a href="{{ route('Register.LoginIn') }}">Login</a></li>
                     </ul>
                 </nav>
             </div>
