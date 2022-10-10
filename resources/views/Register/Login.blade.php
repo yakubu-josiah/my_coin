@@ -3,24 +3,25 @@
     <head>
      
         <title>My Coin Auction - 2022</title>
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-            <meta name="description" content="Best P2P Site In South Africa" />
-            <meta name="keywords" content=""/>
-            <meta name="author" content=""/>
-        
-            <!-- Favicon icon -->
-            <link rel="icon" href="https://mca-official.live/assets/images/favicon.ico" type="image/x-icon">
-            <!-- fontawesome icon -->
-            <link rel="stylesheet" href="https://mca-official.live/assets/fonts/fontawesome/css/fontawesome-all.min.css">
-            <!-- animation css -->
-            <link rel="stylesheet" href="https://mca-official.live/assets/plugins/animation/css/animate.min.css">
-            <!-- vendor css -->
-            <link rel="stylesheet" href="https://mca-official.live/assets/css/style.css">
-            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script><title>My Coin Auction - 2022 Home -Login</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Best P2P Site In South Africa" />
+        <meta name="keywords" content=""/>
+        <meta name="author" content=""/>
+    
+        <!-- Favicon icon -->
+        <link rel="icon" href="{{ asset('Icons/favicon.png') }}" type="image/x-icon">
+        <!-- fontawesome icon -->
+        <link rel="stylesheet" href="{{ asset('css/fontawesome-all.min.css') }}">
+        <!-- animation css -->
+        <link rel="stylesheet" href="{{ asset('css/animate1.min.css') }}">
+        <!-- vendor css -->
+        <link rel="stylesheet" href="https://mca-official.live/assets/css/style.css">
+        {{-- <link rel="stylesheet" href="{{ asset('css/style.css') }}"> --}}
+        <script src="{{ asset('js/sweetalert.min.js') }}"></script><title>My Coin Auction - 2022 Home -Login</title>
         <meta content="my coin auction login mca mca2022 new mca mycoin Auction" name="keywords">
-        </head>
+    </head>
     {{-- <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
@@ -71,7 +72,7 @@
                         </div>
                         <button class="btn btn-primary shadow-2 mb-4">Login</button>
                         <!--<p class="mb-2 text-muted">Forgot password? <a href="https://mca-official.live/password">Reset</a></p>-->
-                        <p class="mb-2 text-muted">Don’t have an account?  <a href="{{ route('signUp') }}">Signup</a></p>
+                        <p class="mb-2 text-muted">Don't have an account?  <a href="{{ route('signUp') }}">Signup</a></p>
                         <!-- <p class="mb-0 text-muted">Don’t have an account? <a href="https://mca-official.live/signup">Signup</a></p> -->
                         </div>
                     </form>
@@ -79,18 +80,11 @@
             </div>
         </div>
 
-        <script src="https://mca-official.live/assets/js/vendor-all.min.js"></script>
-        <script src="https://mca-official.live/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-        <script src="https://mca-official.live/assets/js/pcoded.min.js"></script>
+        <script src="{{ asset('js/vendor-all.min.js') }}"></script>
+        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('js/pcoded.min.js') }}"></script>
             
             
-                                                
-            
-            
-                
-
-
-
 
     </body>
 </html>

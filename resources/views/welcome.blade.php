@@ -22,7 +22,8 @@
         <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" >
         <link href="{{ asset('css/fontawesome.min.css') }}" rel="stylesheet">
         <link href="{{ asset('css/animate.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/venobox.css') }}" rel="stylesheet">
+        <link rel="stylesheet" href="https://mca-official.live/assets/css/style.css">
+        {{-- <link href="{{ asset('css/style.css') }}" rel="stylesheet"> --}}
         <link href="{{ asset('css/owl.carousel.min.css') }}" rel="stylesheet">
 
         

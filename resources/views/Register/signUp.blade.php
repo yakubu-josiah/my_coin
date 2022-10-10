@@ -1,27 +1,27 @@
 <html lang="en">
 
-<head>
+    <head>
      
-<title>My Coin Auction - 2022</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="Best P2P Site In South Africa" />
-    <meta name="keywords" content=""/>
-    <meta name="author" content=""/>
-
-    <!-- Favicon icon -->
-    <link rel="icon" href="https://mca-official.live/assets/images/favicon.ico" type="image/x-icon">
-    <!-- fontawesome icon -->
-    <link rel="stylesheet" href="https://mca-official.live/assets/fonts/fontawesome/css/fontawesome-all.min.css">
-    <!-- animation css -->
-    <link rel="stylesheet" href="https://mca-official.live/assets/plugins/animation/css/animate.min.css">
-    <!-- vendor css -->
-    <link rel="stylesheet" href="https://mca-official.live/assets/css/style.css">
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script><title>My Coin Auction - 2022 Signup</title>
-<meta content="my coin auction Signup mca mca2022 new mca mycoin Auction register" name="keywords">
-
-</head>
+        <title>My Coin Auction - 2022</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Best P2P Site In South Africa" />
+        <meta name="keywords" content=""/>
+        <meta name="author" content=""/>
+    
+        <!-- Favicon icon -->
+        <link rel="icon" href="{{ asset('Icons/favicon.png') }}" type="image/x-icon">
+        <!-- fontawesome icon -->
+        <link rel="stylesheet" href="{{ asset('css/fontawesome-all.min.css') }}">
+        <!-- animation css -->
+        <link rel="stylesheet" href="{{ asset('css/animate1.min.css') }}">
+        <!-- vendor css -->
+        {{-- <link rel="stylesheet" href="{{ asset('css/style.css') }}"> --}}
+        <link rel="stylesheet" href="https://mca-official.live/assets/css/style.css">
+        <script src="{{ asset('js/sweetalert.min.js') }}"></script><title>My Coin Auction - 2022 Home -Login</title>
+        <meta content="my coin auction login mca mca2022 new mca mycoin Auction" name="keywords">
+    </head>
 
 <body>
 
