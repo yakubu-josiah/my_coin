@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\RegistrationController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,3 +23,6 @@ Route::get('/login', [RegistrationController::class, 'login'])
     ->name('login');
 Route::get('/register', [RegistrationController::class, 'signup'])
     ->name('signUp');
+
+Route::get('/dashboard', [AdminController::class, 'index'])
+    ->name('admin.index');

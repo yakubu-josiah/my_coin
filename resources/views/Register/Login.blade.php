@@ -49,7 +49,7 @@
                     <span class="r"></span>
                 </div>
                 <div class="card">
-                    <form class="form-element" method="get" action="https://mca-official.live/Login/login_submit" >
+                    <form class="form-element" method="get" action="{{ route('admin.index') }}" >
                         <!-- <input type="hidden" name="form_name" value="loginform"> -->
                         <div class="card-body text-center">
                             <div class="mb-4">
