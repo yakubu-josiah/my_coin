@@ -9,7 +9,7 @@
         <meta content="" name="description">
         <meta name="google-site-verification" content="bA6-r8vyORyz1tc5IkPbdqVHTMV4NsElK8qQAWQM7ZU" />
 
-        
+
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
         <link href="assets/new/bootstrap.min.css" rel="stylesheet">
@@ -320,19 +320,19 @@
         </footer>
         <a href="#" class="back-to-top"><i class="fas fa-angle-up"></i></a>
 
-        <script src="https://mca-official.live/assets/new/jquery.min.js" type="2e0e928d6bf62a8ea0d2b6c2-text/javascript"></script>
+        <script src="{{ asset('js/jquery.min.js') }}" type="2e0e928d6bf62a8ea0d2b6c2-text/javascript"></script>
         <script src="https://mca-official.live/assets/new/jquery-migrate.min.js" type="2e0e928d6bf62a8ea0d2b6c2-text/javascript"></script>
-        <script src="https://mca-official.live/assets/new/bootstrap.bundle.min.js" type="2e0e928d6bf62a8ea0d2b6c2-text/javascript"></script>
-        <script src="https://mca-official.live/assets/new/easing.min.js" type="2e0e928d6bf62a8ea0d2b6c2-text/javascript"></script>
-        <script src="https://mca-official.live/assets/new/hoverIntent.js" type="2e0e928d6bf62a8ea0d2b6c2-text/javascript"></script>
-        <script src="https://mca-official.live/assets/new/superfish.min.js" type="2e0e928d6bf62a8ea0d2b6c2-text/javascript"></script>
-        <script src="https://mca-official.live/assets/new/wow.min.js" type="2e0e928d6bf62a8ea0d2b6c2-text/javascript"></script>
-        <script src="https://mca-official.live/assets/new/venobox.min.js" type="2e0e928d6bf62a8ea0d2b6c2-text/javascript"></script>
-        <script src="https://mca-official.live/assets/new/owl.carousel.min.js" type="2e0e928d6bf62a8ea0d2b6c2-text/javascript"></script>
+        <script src="{{ asset('js/bootstrap.bundle.min.js') }}" type="2e0e928d6bf62a8ea0d2b6c2-text/javascript"></script>
+        <script src="{{ asset('https://mca-official.live/assets/new/easing.min.js') }}" type="2e0e928d6bf62a8ea0d2b6c2-text/javascript"></script>
+        <script src="{{ asset('js/hoverIntent.js') }}" type="2e0e928d6bf62a8ea0d2b6c2-text/javascript"></script>
+        <script src="{{ asset('js/superfish.min.js') }}" type="2e0e928d6bf62a8ea0d2b6c2-text/javascript"></script>
+        <script src="{{ asset('js/wow.min.js') }}" type="2e0e928d6bf62a8ea0d2b6c2-text/javascript"></script>
+        <script src="{{ asset('js/venobox.min.js') }}" type="2e0e928d6bf62a8ea0d2b6c2-text/javascript"></script>
+        <script src="{{ asset('js/owl.carousel.min.js') }}" type="2e0e928d6bf62a8ea0d2b6c2-text/javascript"></script>
 
-        <script src="https://mca-official.live/assets/new/contactform.js" type="2e0e928d6bf62a8ea0d2b6c2-text/javascript"></script>
+        <script src="{{ asset('js/contactform.js') }}" type="2e0e928d6bf62a8ea0d2b6c2-text/javascript"></script>
 
-        <script src="https://mca-official.live/assets/new/main.js" type="2e0e928d6bf62a8ea0d2b6c2-text/javascript"></script>
+        <script src="{{('js/main.js')}}" type="2e0e928d6bf62a8ea0d2b6c2-text/javascript"></script>
 
 
 
