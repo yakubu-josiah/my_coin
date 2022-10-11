@@ -28,3 +28,5 @@ Route::get('/dashboard', [AdminController::class, 'index'])
     ->name('admin.index');
 Route::get('/Admin/dashboard', [AdminController::class, 'dashboard'])
     ->name('dashboard');
+Route::get('/Admin/dashboard/view-auction', [AdminController::class, 'viewAuction'])
+    ->name('viewAuction');

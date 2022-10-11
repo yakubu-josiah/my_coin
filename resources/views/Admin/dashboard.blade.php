@@ -62,7 +62,7 @@
                         <label>Navigation</label>
                         </li>
                         <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" class="nav-item active">
-                            <a href="https://mca-official.live/dash" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
+                            <a href="{{ route('dashboard') }}" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
                         </li>
                         <li class="nav-item pcoded-menu-caption">
                             <label>Auction</label>
@@ -70,14 +70,14 @@
                         <li data-username="basic components Button Alert Badges breadcrumb Paggination progress Tooltip popovers Carousel Cards Collapse Tabs pills Modal Grid System Typography Extra Shadows Embeds" class="nav-item pcoded-hasmenu">
                             <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Auction Menu</span></a>
                             <ul class="pcoded-submenu">
-                                <li class=""><a href="https://mca-official.live/view_auction" class="">View Auction</a></li>
-                                <li class=""><a href="https://mca-official.live/payment" class="">Pay Bids</a></li>
-                                <li class=""><a href="https://mca-official.live/receive" class="">Receive Payments</a></li>
-                                <li class=""><a href="https://mca-official.live/chat" class="">BID Messages</a></li>
-                                <li class=""><a href="https://mca-official.live/sales" class="">Sale On Auction</a></li>
-                                <li class=""><a href="https://mca-official.live/bonus" class="">Bonuses</a></li> 
-                                <li class=""><a href="https://mca-official.live/affiliates" class="">Affiliates</a></li>
-                                <li class=""><a href="https://mca-official.live/track" class="">Auction History</a></li>
+                                <li class=""><a href="{{ route('viewAuction') }}" class="">View Auction</a></li>
+                                <li class=""><a href="{{ route('payBids') }}" class="">Pay Bids</a></li>
+                                <li class=""><a href="{{ route('receivePay') }}" class="">Receive Payments</a></li>
+                                <li class=""><a href="{{ route('bidMsg') }}" class="">BID Messages</a></li>
+                                <li class=""><a href="{{ route('sale') }}" class="">Sale On Auction</a></li>
+                                <li class=""><a href="{{ route('bonus') }}" class="">Bonuses</a></li> 
+                                <li class=""><a href="{{ route('affiliates') }}" class="">Affiliates</a></li>
+                                <li class=""><a href="{{ route('history') }}" class="">Auction History</a></li>
                             </ul>
                         </li>
                         <li class="nav-item pcoded-menu-caption">
@@ -182,7 +182,8 @@
                                                     <div class="col-6">
                                                         <h3 class="f-w-300 d-flex align-items-center  m-b-0"><i
                                                                 class="feather icon-arrow-up text-c-green f-30 m-r-10"></i>R
-                                                            0                                                        </h3>
+                                                            0                                                        
+                                                        </h3>
                                                     </div>
                                                     <div class="col-6 text-right withdraw_button">
                                                         <p class="m-b-0">
@@ -208,7 +209,8 @@
                                                     <div class="col-9">
                                                         <h3 class="f-w-300 d-flex align-items-center  m-b-0"><i
                                                                 class="feather icon-arrow-right text-c-green f-30 m-r-10"></i>
-                                                            100                                                        </h3>
+                                                            100                                                        
+                                                        </h3>
                                                     </div>
                                                     <div class="col-3 text-right">
                                                         <p class="m-b-0">For Bonus</p>
@@ -349,7 +351,7 @@
                                                     <div class="col">
                                                         <h3 class="f-w-300">Social Groups</h3>
                                                         <span class="d-block text-uppercase"><a
-                                                                href="" target="_blank">Join
+                                                                href="#" target="_blank">Join
                                                                 Telegram</a></span>
                                                         <span class="d-block text-uppercase"><a
                                                                 href="" target="_blank">Join

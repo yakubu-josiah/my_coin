@@ -15,4 +15,9 @@ class AdminController extends Controller
     {
         return view('Admin.dashboard');
     }
+
+    public function viewAuction()
+    {
+        return view('Admin.AuctionMenu.viewAuction');
+    }
 }
