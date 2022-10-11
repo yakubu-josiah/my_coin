@@ -26,3 +26,5 @@ Route::get('/register', [RegistrationController::class, 'signup'])
 
 Route::get('/dashboard', [AdminController::class, 'index'])
     ->name('admin.index');
+Route::get('/Admin/dashboard', [AdminController::class, 'dashboard'])
+    ->name('dashboard');
