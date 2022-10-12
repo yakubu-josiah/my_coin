@@ -87,7 +87,7 @@
                             <a href="{{ route('banking') }}" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Banking Details</span></a>
                         </li>
                         <li data-username="Table bootstrap datatable footable" class="nav-item">
-                            <a href="https://mca-official.live/security" class="nav-link "><span class="pcoded-micon"><i class="feather icon-server"></i></span><span class="pcoded-mtext">Account Password</span></a>
+                            <a href="{{ route('account') }}" class="nav-link "><span class="pcoded-micon"><i class="feather icon-server"></i></span><span class="pcoded-mtext">Account Password</span></a>
                         </li>
                         <li class="nav-item pcoded-menu-caption">
                             <label>Authentication</label>

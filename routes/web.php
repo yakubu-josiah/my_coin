@@ -45,4 +45,5 @@ Route::controller(AdminController::class)->group(function () {
     Route::get('/Admin/dashboard/affiliates', 'affiliateAuction')->name('affiliates');
 
     Route::get('/Admin/dashboard/banking-details', 'bankingAdvanced')->name('banking');
+    Route::get('/Admin/dashboard/account-password', 'accountAdvanced')->name('account');
 });

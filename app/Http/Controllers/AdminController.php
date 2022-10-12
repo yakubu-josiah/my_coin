@@ -55,4 +55,9 @@ class AdminController extends Controller
     {
         return view('Admin.AdvancedSettings.bankDetails');
     }
+
+    public function accountAdvanced()
+    {
+        return view('Admin.AdvancedSettings.account');
+    }
 }
