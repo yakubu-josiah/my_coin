@@ -50,4 +50,9 @@ class AdminController extends Controller
     {
         return view('Admin.AuctionMenu.affiliates');
     }
+
+    public function bankingAdvanced()
+    {
+        return view('Admin.AdvancedSettings.bankDetails');
+    }
 }

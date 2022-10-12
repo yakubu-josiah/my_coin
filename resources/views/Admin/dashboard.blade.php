@@ -84,7 +84,7 @@
                             <label>Advanced Settings</label>
                         </li>
                         <li data-username="form elements advance componant validation masking wizard picker select" class="nav-item">
-                            <a href="https://mca-official.live/banking" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Banking Details</span></a>
+                            <a href="{{ route('banking') }}" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Banking Details</span></a>
                         </li>
                         <li data-username="Table bootstrap datatable footable" class="nav-item">
                             <a href="https://mca-official.live/security" class="nav-link "><span class="pcoded-micon"><i class="feather icon-server"></i></span><span class="pcoded-mtext">Account Password</span></a>
