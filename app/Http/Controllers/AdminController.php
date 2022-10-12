@@ -35,4 +35,9 @@ class AdminController extends Controller
     {
         return view('Admin.AuctionMenu.bidMsg');
     }
+
+    public function salesAuction()
+    {
+        return view('Admin.AuctionMenu.sales');
+    }
 }

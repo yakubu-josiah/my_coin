@@ -40,4 +40,5 @@ Route::controller(AdminController::class)->group(function () {
     Route::get('/Admin/dashboard/pay-bids', 'payAuction')->name('payBids');
     Route::get('/Admin/dashboard/receive-payments', 'receiveAuction')->name('receivePay');
     Route::get('/Admin/dashboard/BID-messages', 'bidAuction')->name('bidMsg');
+    Route::get('/Admin/dashboard/sale-on-auction', 'salesAuction')->name('sales');
 });

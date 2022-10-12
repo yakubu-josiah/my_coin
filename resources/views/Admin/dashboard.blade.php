@@ -74,8 +74,8 @@
                                 <li class=""><a href="{{ route('payBids') }}" class="">Pay Bids</a></li>
                                 <li class=""><a href="{{ route('receivePay') }}" class="">Receive Payments</a></li>
                                 <li class=""><a href="{{ route('bidMsg') }}" class="">BID Messages</a></li>
-                             {{--      <li class=""><a href="{{ route('sale') }}" class="">Sale On Auction</a></li>
-                                <li class=""><a href="{{ route('bonus') }}" class="">Bonuses</a></li> 
+                                <li class=""><a href="{{ route('sales') }}" class="">Sale On Auction</a></li>
+                              {{-- <li class=""><a href="{{ route('bonus') }}" class="">Bonuses</a></li> 
                                 <li class=""><a href="{{ route('affiliates') }}" class="">Affiliates</a></li>
                                 <li class=""><a href="{{ route('history') }}" class="">Auction History</a></li> --}}
                             </ul>
