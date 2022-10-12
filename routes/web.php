@@ -42,4 +42,5 @@ Route::controller(AdminController::class)->group(function () {
     Route::get('/Admin/dashboard/BID-messages', 'bidAuction')->name('bidMsg');
     Route::get('/Admin/dashboard/sale-on-auction', 'salesAuction')->name('sales');
     Route::get('/Admin/dashboard/bonuses', 'bonusAuction')->name('bonus');
+    Route::get('/Admin/dashboard/affiliates', 'affiliateAuction')->name('affiliates');
 });

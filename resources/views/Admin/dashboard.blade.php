@@ -76,8 +76,8 @@
                                 <li class=""><a href="{{ route('bidMsg') }}" class="">BID Messages</a></li>
                                 <li class=""><a href="{{ route('sales') }}" class="">Sale On Auction</a></li>
                                 <li class=""><a href="{{ route('bonus') }}" class="">Bonuses</a></li> 
-                               {{--  <li class=""><a href="{{ route('affiliates') }}" class="">Affiliates</a></li>
-                                <li class=""><a href="{{ route('history') }}" class="">Auction History</a></li> --}}
+                                <li class=""><a href="{{ route('affiliates') }}" class="">Affiliates</a></li>
+                                {{--  <li class=""><a href="{{ route('history') }}" class="">Auction History</a></li> --}}
                             </ul>
                         </li>
                         <li class="nav-item pcoded-menu-caption">

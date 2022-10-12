@@ -45,4 +45,9 @@ class AdminController extends Controller
     {
         return view('Admin.AuctionMenu.bonuses');
     }
+
+    public function affiliateAuction()
+    {
+        return view('Admin.AuctionMenu.affiliates');
+    }
 }
