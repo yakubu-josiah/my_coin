@@ -34,8 +34,9 @@ Route::get('/register', [RegistrationController::class, 'signup'])
 //     ->name('payBids');
 
 Route::controller(AdminController::class)->group(function () {
-        Route::get('/Admin', 'index')->name('admin.index');
-        Route::get('/Admin/dashboard', 'dashboard')->name('dashboard');
-        Route::get('/Admin/dashboard/view-auction', 'viewAuction')->name('viewAuction');
-        Route::get('/Admin/dashboard/pay-bids', 'payAuction')->name('payBids');
+    Route::get('/Admin', 'index')->name('admin.index');
+    Route::get('/Admin/dashboard', 'dashboard')->name('dashboard');
+    Route::get('/Admin/dashboard/view-auction', 'viewAuction')->name('viewAuction');
+    Route::get('/Admin/dashboard/pay-bids', 'payAuction')->name('payBids');
+    Route::get('/Admin/dashboard/receive-payments', 'receiveAuction')->name('receivePay');
 });

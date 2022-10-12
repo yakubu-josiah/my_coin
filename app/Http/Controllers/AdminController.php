@@ -25,4 +25,9 @@ class AdminController extends Controller
     {
         return view('Admin.AuctionMenu.payBids');
     }
+
+    public function receiveAuction()
+    {
+        return view('Admin.AuctionMenu.receivePay');
+    }
 }
