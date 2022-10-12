@@ -20,4 +20,9 @@ class AdminController extends Controller
     {
         return view('Admin.AuctionMenu.viewAuction');
     }
+
+    public function payAuction()
+    {
+        return view('Admin.AuctionMenu.payBids');
+    }
 }

@@ -24,9 +24,18 @@ Route::get('/login', [RegistrationController::class, 'login'])
 Route::get('/register', [RegistrationController::class, 'signup'])
     ->name('signUp');
 
-Route::get('/dashboard', [AdminController::class, 'index'])
-    ->name('admin.index');
-Route::get('/Admin/dashboard', [AdminController::class, 'dashboard'])
-    ->name('dashboard');
-Route::get('/Admin/dashboard/view-auction', [AdminController::class, 'viewAuction'])
-    ->name('viewAuction');
+// Route::get('/dashboard', [AdminController::class, 'index'])
+//     ->name('admin.index');
+// Route::get('/Admin/dashboard', [AdminController::class, 'dashboard'])
+//     ->name('dashboard');
+// Route::get('/Admin/dashboard/view-auction', [AdminController::class, 'viewAuction'])
+//     ->name('viewAuction');
+// Route::get('/Admin/dashboard/pay-bids', [AdminController::class, 'payAuction'])
+//     ->name('payBids');
+
+Route::controller(AdminController::class)->group(function () {
+        Route::get('/Admin', 'index')->name('admin.index');
+        Route::get('/Admin/dashboard', 'dashboard')->name('dashboard');
+        Route::get('/Admin/dashboard/view-auction', 'viewAuction')->name('viewAuction');
+        Route::get('/Admin/dashboard/pay-bids', 'payAuction')->name('payBids');
+});
