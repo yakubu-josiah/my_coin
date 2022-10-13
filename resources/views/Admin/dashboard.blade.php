@@ -92,7 +92,7 @@
                         <li class="nav-item pcoded-menu-caption">
                             <label>Authentication</label>
                         </li>
-                        <li data-username="Sample Page" class="nav-item"><a href="https://mca-official.live/Login/logout" class="nav-link"><span class="pcoded-micon"><i class="feather icon-power"></i></span><span class="pcoded-mtext">Sign Out</span></a></li>
+                        <li data-username="Sample Page" class="nav-item"><a href="{{ route('login') }}" class="nav-link"><span class="pcoded-micon"><i class="feather icon-power"></i></span><span class="pcoded-mtext">Sign Out</span></a></li>
                     </ul>
                 </div>
                 <div class="slimScrollBar" style="background: rgba(0, 0, 0, 0.5); width: 5px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 595.2px;"></div>

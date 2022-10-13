@@ -11,6 +11,11 @@ class AdminController extends Controller
         return view('Admin.index');
     }
 
+    public function archived()
+    {
+        return view('Admin.archive');
+    }
+
     public function dashboard()
     {
         return view('Admin.dashboard');

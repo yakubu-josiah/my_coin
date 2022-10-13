@@ -117,7 +117,7 @@
                                                     <a href="{{ route('dashboard') }}" class="btn btn-secondary">Got It</a>
                                                 </h6>
                                                 <hr>
-                                                <a href="https://mca-official.live/archieve">View previous notifications</a>
+                                                <a href="{{ route('archived') }}">View previous notifications</a>
                                             </div>
                                         </div>
                                     </div>
