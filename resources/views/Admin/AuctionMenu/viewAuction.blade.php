@@ -1,52 +1,7 @@
+@extends('Layouts.layoutAdmin')
+@section('title', '- View Auctions')
 
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>My Coin Auction - 2022</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="" />
-        <meta name="keywords" content=""/>
-        <meta name="author" content=""/>
-
-        <!-- Favicon icon -->
-        <link rel="icon" href="https://mca-official.live/assets/images/favicon.ico" type="image/x-icon">
-        <!-- fontawesome icon -->
-        <link rel="stylesheet" href="https://mca-official.live/assets/fonts/fontawesome/css/fontawesome-all.min.css">
-        <!-- animation css -->
-        <link rel="stylesheet" href="https://mca-official.live/assets/plugins/animation/css/animate.min.css">
-        <!-- vendor css -->
-        <link rel="stylesheet" href="https://mca-official.live/assets/css/style.css">
-
-        <style>
-            .fixed-button.active {
-            bottom: 50px;
-            opacity: 1;
-            visibility: hidden;
-            }
-
-            
-            .fixed-button {
-                bottom: 50px;
-                opacity: 1;
-                visibility: hidden;
-            }
-
-        </style>
-        
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGZW11GB1G"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-NGZW11GB1G');
-        </script>
-    </head>
-
-    <body>
+@section('content')
         <nav class="pcoded-navbar">
             <div class="navbar-wrapper">
                 <div class="navbar-brand header-logo">
@@ -254,6 +209,4 @@
 	    <script src="https://mca-official.live/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
         <script src="https://mca-official.live/assets/js/pcoded.min.js"></script>
     
-    </body>
-
-</html>
+@endsection
