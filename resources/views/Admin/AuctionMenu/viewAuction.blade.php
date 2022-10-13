@@ -1,4 +1,4 @@
-@extends('Layouts.layoutAdmin')
+@extends('partials.layoutAdmin')
 @section('title', '- View Auctions')
     
 @section('content')
@@ -463,6 +463,6 @@
     </script>
 
 
-    @include('Layouts.twakJS')
+    @include('partials.twakJS')
 @endsection
 

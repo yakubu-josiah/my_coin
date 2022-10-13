@@ -1,4 +1,4 @@
-@extends('Layouts.layoutAdmin')
+@extends('partials.layoutAdmin')
 @section('title', '- Notice!!')
 
 @section('content')
@@ -139,6 +139,6 @@
                 </div>
             </div>
         </div>
-        @include('Layouts.twakJS')
+        @include('partials.twakJS')
 
 @endsection

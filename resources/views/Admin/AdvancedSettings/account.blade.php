@@ -1,4 +1,4 @@
-@extends('Layouts.layoutAdmin')
+@extends('partials.layoutAdmin')
 @section('title', '- Account Details')
     
 @section('content')
@@ -151,6 +151,6 @@
             </div>
         </div>
     </div>
-    @include('Layouts.twakJS')
+    @include('partials.twakJS')
 
 @endsection

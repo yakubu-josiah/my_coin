@@ -1,4 +1,4 @@
-@extends('Layouts.layoutAdmin')
+@extends('partials.layoutAdmin')
 @section('title', '- Welcome!!')
 
 @section('content')
@@ -112,6 +112,6 @@
 {{-- ========================== Content Section Ends ===================== --}}
 
 
-    @include('Layouts.twakJS')
+    @include('partials.twakJS')
         
  @endsection

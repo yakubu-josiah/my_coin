@@ -1,4 +1,4 @@
-@extends('Layouts.layoutAdmin')
+@extends('partials.layoutAdmin')
 @section('title', '- Bank Details')
     
 @section('content')
@@ -502,7 +502,7 @@
         </div>
     </div>
 
-    @include('Layouts.twakJS')
+    @include('partials.twakJS')
 
 @endsection
 
