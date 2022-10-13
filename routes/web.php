@@ -34,17 +34,18 @@ Route::get('/register', [RegistrationController::class, 'signup'])
 //     ->name('payBids');
 
 Route::controller(AdminController::class)->group(function () {
-    Route::get('/Admin', 'index')->name('admin.index');
-    Route::get('/Admin/archived', 'archived')->name('archived');
-    Route::get('/Admin/dashboard', 'dashboard')->name('dashboard');
-    Route::get('/Admin/dashboard/view-auction', 'viewAuction')->name('viewAuction');
-    Route::get('/Admin/dashboard/pay-bids', 'payAuction')->name('payBids');
-    Route::get('/Admin/dashboard/receive-payments', 'receiveAuction')->name('receivePay');
-    Route::get('/Admin/dashboard/BID-messages', 'bidAuction')->name('bidMsg');
-    Route::get('/Admin/dashboard/sale-on-auction', 'salesAuction')->name('sales');
-    Route::get('/Admin/dashboard/bonuses', 'bonusAuction')->name('bonus');
-    Route::get('/Admin/dashboard/affiliates', 'affiliateAuction')->name('affiliates');
+    Route::get('/User', 'index')->name('admin.index');
+    Route::get('/User/archived', 'archived')->name('archived');
+    Route::get('/User/dashboard', 'dashboard')->name('dashboard');
+    Route::get('/User/dashboard/view-auction', 'viewAuction')->name('viewAuction');
+    Route::get('/User/dashboard/pay-bids', 'payAuction')->name('payBids');
+    Route::get('/User/dashboard/receive-payments', 'receiveAuction')->name('receivePay');
+    Route::get('/User/dashboard/BID-messages', 'bidAuction')->name('bidMsg');
+    Route::get('/User/dashboard/sale-on-auction', 'salesAuction')->name('sales');
+    Route::get('/User/dashboard/bonuses', 'bonusAuction')->name('bonus');
+    Route::get('/User/dashboard/affiliates', 'affiliateAuction')->name('affiliates');
+    Route::get('/User/dashboard/histories', 'historyAuction')->name('history');
 
-    Route::get('/Admin/dashboard/banking-details', 'bankingAdvanced')->name('banking');
-    Route::get('/Admin/dashboard/account-password', 'accountAdvanced')->name('account');
+    Route::get('/User/dashboard/banking-details', 'bankingAdvanced')->name('banking');
+    Route::get('/User/dashboard/account-password', 'accountAdvanced')->name('account');
 });
