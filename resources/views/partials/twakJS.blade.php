@@ -11,6 +11,6 @@
         })();
     </script>
     <!--End of Tawk.to Script-->
-    <script src="https://mca-official.live/assets/js/vendor-all.min.js"></script>
-    <script src="https://mca-official.live/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://mca-official.live/assets/js/pcoded.min.js"></script>
+    <script src="{{ asset('js/vendor-all.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/pcoded.min.js') }}"></script>

@@ -12,7 +12,6 @@
 
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-        <link href="assets/new/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/duotone.css" integrity="sha384-R3QzTxyukP03CMqKFe0ssp5wUvBPEyy9ZspCB+Y01fEjhMwcXixTyeot+S40+AjZ" crossorigin="anonymous"/>
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/fontawesome.css" integrity="sha384-eHoocPgXsiuZh+Yy6+7DsKAerLXyJmu2Hadh4QYyt+8v86geixVYwFqUvMU8X90l" crossorigin="anonymous"/>
         
@@ -22,15 +21,25 @@
         <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" >
         <link href="{{ asset('css/fontawesome.min.css') }}" rel="stylesheet">
         <link href="{{ asset('css/animate.min.css') }}" rel="stylesheet">
-        <link rel="stylesheet" href="https://mca-official.live/assets/css/style.css">
-        {{-- <link href="{{ asset('css/style.css') }}" rel="stylesheet"> --}}
+        <link href="{{ asset('css/venobox.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
         <link href="{{ asset('css/owl.carousel.min.css') }}" rel="stylesheet">
 
         
 
         <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" >
-        <script type="text/javascript" src="{{ asset('js/app.js') }}" defer></script>
 
+        <script type="text/javascript" src="{{ asset('js/app.js') }}" defer></script>
+        <style>
+            #intro {
+            width: 100%;
+            height: 100vh;
+            background: url( {{ URL::asset('images/intro-bg.jpg') }} ) top center;
+            background-size: cover;
+            overflow: hidden;
+            position: relative;
+        }
+        </style>
     </head>
 
     <body>
@@ -334,7 +343,7 @@
 
         <script src="{{ asset('js/contactform.js') }}" type="2e0e928d6bf62a8ea0d2b6c2-text/javascript"></script>
 
-        <script src="{{('js/main.js')}}" type="2e0e928d6bf62a8ea0d2b6c2-text/javascript"></script>
+        <script src="{{ asset('js/main.js')}}" type="2e0e928d6bf62a8ea0d2b6c2-text/javascript"></script>
 
         <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="2e0e928d6bf62a8ea0d2b6c2-|49" defer=""></script>
 

@@ -17,7 +17,9 @@
         <!-- animation css -->
         <link rel="stylesheet" href="{{ asset('css/animate1.min.css') }}">
         <!-- vendor css -->
-        {{-- <link rel="stylesheet" href="{{ asset('css/style.css') }}"> --}}
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        {{-- <link href="{{ asset('css/styles.css') }}" rel="stylesheet"> --}}
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <link rel="stylesheet" href="https://mca-official.live/assets/css/style.css">
         <script src="{{ asset('js/sweetalert.min.js') }}"></script><title>My Coin Auction - 2022 Home -Login</title>
         <meta content="my coin auction login mca mca2022 new mca mycoin Auction" name="keywords">

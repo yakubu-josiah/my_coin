@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="{{ asset('css/animate.min.css') }}">
         <!-- vendor css -->
         <link rel="stylesheet" href="https://mca-official.live/assets/css/style.css">
-        {{-- <link href="{{ asset('css/style.css') }}" rel="stylesheet"> --}}
+        <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
         <style>  
             .fixed-button.active {
