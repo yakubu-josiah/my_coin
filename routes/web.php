@@ -19,19 +19,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Auth::routes();
+
 Route::get('/login', [RegistrationController::class, 'login'])
     ->name('login');
-Route::get('/register', [RegistrationController::class, 'signup'])
+Route::post('/register', [RegistrationController::class, 'signup'])
     ->name('signUp');
-
-// Route::get('/dashboard', [AdminController::class, 'index'])
-//     ->name('admin.index');
-// Route::get('/Admin/dashboard', [AdminController::class, 'dashboard'])
-//     ->name('dashboard');
-// Route::get('/Admin/dashboard/view-auction', [AdminController::class, 'viewAuction'])
-//     ->name('viewAuction');
-// Route::get('/Admin/dashboard/pay-bids', [AdminController::class, 'payAuction'])
-//     ->name('payBids');
 
 Route::controller(AdminController::class)->group(function () {
     Route::get('/User', 'index')->name('admin.index');
@@ -49,3 +42,9 @@ Route::controller(AdminController::class)->group(function () {
     Route::get('/User/dashboard/banking-details', 'bankingAdvanced')->name('banking');
     Route::get('/User/dashboard/account-password', 'accountAdvanced')->name('account');
 });
+
+
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
