@@ -8,8 +8,8 @@
             <div class="mb-4">
                 <i class="feather icon-user-plus auth-icon"></i>
             </div>
-            <form method="POST" action="{{ route('register') }}">
-                @csrf
+            <form action="{{ route('register') }}" method="POST">
+                @csrf 
                 <h3 class="mb-4">Sign up</h3>
                 <p class="mb-0 text-muted">We welcome you to our family</p>
                 <hr>

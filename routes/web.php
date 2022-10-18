@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\RegistrationController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,10 +23,10 @@ Auth::routes();
 
 Route::get('/login', [RegistrationController::class, 'login'])
     ->name('login');
-Route::post('/register', [RegistrationController::class, 'signup'])
+Route::get('/registration', [RegistrationController::class, 'signup'])
     ->name('signUp');
 
-Route::controller(AdminController::class)->group(function () {
+Route::controller(UserController::class)->group(function () {
     Route::get('/User', 'index')->name('admin.index');
     Route::get('/User/archived', 'archived')->name('archived');
     Route::get('/User/dashboard', 'dashboard')->name('dashboard');

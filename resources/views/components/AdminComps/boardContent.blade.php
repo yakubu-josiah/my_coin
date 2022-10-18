@@ -47,9 +47,13 @@
             <label>Authentication</label>
         </li>
         <li data-username="Sample Page" class="nav-item">
-            <a href="{{ route('login') }}" class="nav-link"><span class="pcoded-micon">
-                <i class="feather icon-power"></i></span><span class="pcoded-mtext">Sign Out</span>
+            <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> 
+               <span class="pcoded-micon"><i class="feather icon-power"></i></span>
+               <span class="pcoded-mtext">Sign Out</span>
             </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+            </form>
         </li>
     </ul>
 
