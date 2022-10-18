@@ -34,7 +34,7 @@
             #intro {
             width: 100%;
             height: 100vh;
-            background: url( {{ URL::asset('images/intro-bg.jpg') }} ) top center;
+            background: url('{{ URL::asset('images/intro-bg.jpg') }}') top center;
             background-size: cover;
             overflow: hidden;
             position: relative;
@@ -296,8 +296,8 @@
                             <h4>Useful Links</h4>
                             <ul>
                                 <li><i class="fas fa-angle-right"></i> <a href="#">Home</a></li>
-                                <li><i class="fas fa-angle-right"></i> <a href="https://mca-official.live/signup">Sign Up</a></li>
-                                <li><i class="fas fa-angle-right"></i> <a href="https://mca-official.live/signin">Login</a></li>
+                                <li><i class="fas fa-angle-right"></i> <a href="{{ route('signUp') }}">Sign Up</a></li>
+                                <li><i class="fas fa-angle-right"></i> <a href="{{ route('login') }}">Login</a></li>
                                 <li><i class="fas fa-angle-right"></i> <a href="privacy">Privacy Policy</a></li>
                                 <li><i class="fas fa-angle-right"></i> <a href="terms">Terms And Conditions </a></li>
                             </ul>

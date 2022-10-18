@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AdminController extends Controller
+class UserController extends Controller
 {
     public function __construct()
     {
@@ -13,66 +13,66 @@ class AdminController extends Controller
 
     public function index()
     {
-        return view('Admin.index');
+        return view('User.index');
     }
 
     public function archived()
     {
-        return view('Admin.archive');
+        return view('User.archive');
     }
 
     public function dashboard()
     {
-        return view('Admin.dashboard');
+        return view('User.dashboard');
     }
 
     public function viewAuction()
     {
-        return view('Admin.AuctionMenu.viewAuction');
+        return view('User.AuctionMenu.viewAuction');
     }
 
     public function payAuction()
     {
-        return view('Admin.AuctionMenu.payBids');
+        return view('User.AuctionMenu.payBids');
     }
 
     public function receiveAuction()
     {
-        return view('Admin.AuctionMenu.receivePay');
+        return view('User.AuctionMenu.receivePay');
     }
 
     public function bidAuction()
     {
-        return view('Admin.AuctionMenu.bidMsg');
+        return view('User.AuctionMenu.bidMsg');
     }
 
     public function salesAuction()
     {
-        return view('Admin.AuctionMenu.sales');
+        return view('User.AuctionMenu.sales');
     }
 
     public function bonusAuction()
     {
-        return view('Admin.AuctionMenu.bonuses');
+        return view('User.AuctionMenu.bonuses');
     }
 
     public function affiliateAuction()
     {
-        return view('Admin.AuctionMenu.affiliates');
+        return view('User.AuctionMenu.affiliates');
     }
 
     public function historyAuction()
     {
-        return view('Admin.AuctionMenu.history');
+        return view('User.AuctionMenu.history');
     }
 
     public function bankingAdvanced()
     {
-        return view('Admin.AdvancedSettings.bankDetails');
+        return view('User.AdvancedSettings.bankDetails');
     }
 
     public function accountAdvanced()
     {
-        return view('Admin.AdvancedSettings.account');
+        return view('User.AdvancedSettings.account');
     }
 }
