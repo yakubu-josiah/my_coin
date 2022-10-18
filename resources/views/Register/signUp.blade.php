@@ -6,7 +6,7 @@
     <x-HomeComps.regForm>
         <div class="card-body text-center">
             <div class="mb-4">
-                <i class="feather icon-user-plus auth-icon"></i>
+                <i class="feather icon-check-plus user-plus auth-icon"></i>
             </div>
             <form action="{{ route('register') }}" method="POST">
                 @csrf 
@@ -22,7 +22,7 @@
                     <input type="number" class="form-control" placeholder="Mobile Number +27" name="number" value="{{ old('number') }}">
                 </div>
                 <div class="input-group mb-4">
-                    <input type="password" class="form-control" placeholder="Password" name="password" >
+                    <input type="password" class="form-control" placeholder="Password" name="password">
                 </div>
                 <div class="input-group mb-4">
                     <input type="email" class="form-control" placeholder="Email" name="email">
@@ -37,13 +37,14 @@
                     <div class="checkbox checkbox-fill d-inline">
                         <label for="checkbox-fill-2" class="cr">Mobile number must be in this format
                             (+27840000001)</label>
+                        </div>
                     </div>
+                    <button class="btn btn-primary shadow-2 mb-4">Sign up</button>
+                    <p class="mb-0 text-muted">Already have an account? <a href="{{ route('login')}}"> Log in</a></p>
+                    <!-- <p class="mb-0 text-muted"><a href="#">Reset Password</a></p> -->
                 </div>
-                <button class="btn btn-primary shadow-2 mb-4">Sign up</button>
-                <p class="mb-0 text-muted">Already have an account? <a href="{{ route('login')}}"> Log in</a></p>
-                <!-- <p class="mb-0 text-muted"><a href="#">Reset Password</a></p> -->
+                <x-HomeComps.errorBag />
             </form>
-        </div>
     </x-HomeComps.regForm>
     @include('partials.twakJS')        
 @endsection    

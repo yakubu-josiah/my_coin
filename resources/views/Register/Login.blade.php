@@ -6,6 +6,7 @@
     <x-HomeComps.regForm>
         <form class="form-element" method="POST" action="{{ route('login') }}" >
             @csrf
+            <x-HomeComps.errorBag />
             <!-- <input type="hidden" name="form_name" value="loginform"> -->
             <div class="card-body text-center">
                 <div class="mb-4">
