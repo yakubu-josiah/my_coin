@@ -57,7 +57,7 @@
                         <li><a href="#schedule">Schedule</a></li>
                         <li><a href="#faq">Faq</a></li>
                         <li><a href="#testimonial">Testimonials</a></li>
-                        <li><a href="{{ route('signUp') }}">Sign up</a></li>
+                        <li><a href="{{ route('register') }}">Sign up</a></li>
                         <li class="buy-tickets"><a href="{{ route('login') }}">Login</a></li>
                     </ul>
                 </nav>
@@ -296,7 +296,7 @@
                             <h4>Useful Links</h4>
                             <ul>
                                 <li><i class="fas fa-angle-right"></i> <a href="#">Home</a></li>
-                                <li><i class="fas fa-angle-right"></i> <a href="{{ route('signUp') }}">Sign Up</a></li>
+                                <li><i class="fas fa-angle-right"></i> <a href="{{ route('register') }}">Sign Up</a></li>
                                 <li><i class="fas fa-angle-right"></i> <a href="{{ route('login') }}">Login</a></li>
                                 <li><i class="fas fa-angle-right"></i> <a href="privacy">Privacy Policy</a></li>
                                 <li><i class="fas fa-angle-right"></i> <a href="terms">Terms And Conditions </a></li>

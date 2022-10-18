@@ -21,10 +21,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/login', [RegistrationController::class, 'login'])
-    ->name('login');
-Route::get('/registration', [RegistrationController::class, 'signup'])
-    ->name('signUp');
+// Route::get('/login', [RegistrationController::class, 'login'])
+//     ->name('login');
+// Route::get('/registration', [RegistrationController::class, 'signup'])
+//     ->name('signUp');
 
 Route::controller(UserController::class)->group(function () {
     Route::get('/User', 'index')->name('admin.index');
