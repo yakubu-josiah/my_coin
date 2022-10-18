@@ -8,21 +8,21 @@
             <div class="mb-4">
                 <i class="feather icon-user-plus auth-icon"></i>
             </div>
-            <form method="post" action="{{ route('login') }}">
-
+            <form method="POST" action="{{ route('register') }}">
+                @csrf
                 <h3 class="mb-4">Sign up</h3>
                 <p class="mb-0 text-muted">We welcome you to our family</p>
                 <hr>
                 <p class="mb-0 text-muted"> </p>
                 <hr>
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Username" name="username">
+                    <input type="text" class="form-control" placeholder="Username" name="username" value="{{ old('username') }}">
                 </div>
                 <div class="input-group mb-3">
-                    <input type="number" class="form-control" placeholder="Mobile Number +27" name="phone">
+                    <input type="number" class="form-control" placeholder="Mobile Number +27" name="number" value="{{ old('number') }}">
                 </div>
                 <div class="input-group mb-4">
-                    <input type="password" class="form-control" placeholder="Password" name="password">
+                    <input type="password" class="form-control" placeholder="Password" name="password" >
                 </div>
                 <div class="input-group mb-4">
                     <input type="email" class="form-control" placeholder="Email" name="email">
