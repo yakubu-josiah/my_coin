@@ -2,18 +2,18 @@
 @section('title', '- Account Details')
     
 @section('content')
-    <x-AdminComps.dashboard>
-        <x-AdminComps.boardContent />
-    </x-AdminComps.dashboard>
+    <x-UserComps.dashboard>
+        <x-UserComps.boardContent />
+    </x-UserComps.dashboard>
 
-    <x-AdminComps.mainContent>
+    <x-UserComps.mainContent>
         <div class="page-header"></div>
         <div class="main-body">
             <div class="page-wrapper">
 
                 <div class="row">
                     <div class="col-sm-12">
-                        <h5 class="mb-3">Account Password</h5>
+                        <h5 class="mb-3">Account Details</h5>
                         <hr>
                         <div class="accordion" id="accordionExample">
                             <h5 class="text-muted">Edit Contact Information</h5>
@@ -57,7 +57,7 @@
                 </div>
             </div>
         </div>
-    </x-AdminComps.mainContent>
+    </x-UserComps.mainContent>
     @include('partials.twakJS')
 
 @endsection

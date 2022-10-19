@@ -2,11 +2,11 @@
 @section('title', '- BID Messages')
 
 @section('content')
-    <x-AdminComps.dashboard>
-        <x-AdminComps.boardContent />
-    </x-AdminComps.dashboard>
+    <x-UserComps.dashboard>
+        <x-UserComps.boardContent />
+    </x-UserComps.dashboard>
 
-    <x-AdminComps.mainContent>
+    <x-UserComps.mainContent>
         <div class="page-header"></div>
         <div class="main-body">
             <div class="page-wrapper">
@@ -18,12 +18,11 @@
 
                     </div>
                 </div>
-                <div class="row">
-                </div>
+                <div class="row"></div>
 
             </div>
         </div>
-    </x-AdminComps.mainContent>
+    </x-UserComps.mainContent>
 
     @include('partials.twakJS')
 

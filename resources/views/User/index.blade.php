@@ -2,11 +2,11 @@
 @section('title', '- Welcome!!')
 
 @section('content')
-    <x-AdminComps.dashboard>
+    <x-UserComps.dashboard>
 
-    </x-AdminComps.dashboard>
+    </x-UserComps.dashboard>
 
-    <x-AdminComps.mainContent>
+    <x-UserComps.mainContent>
         <div class="page-header">
                 {{-- ======== THIS SHOULD GO IN MANUALLY ========= --}}
                 <div class="page-block">
@@ -48,7 +48,7 @@
 
             </div>
         </div>
-    </x-AdminComps.mainContent>
+    </x-UserComps.mainContent>
     @include('partials.twakJS')
         
  @endsection

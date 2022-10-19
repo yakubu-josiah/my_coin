@@ -25,7 +25,7 @@
                     <input type="password" class="form-control" placeholder="Password" name="password">
                 </div>
                 <div class="input-group mb-4">
-                    <input type="email" class="form-control" placeholder="Email" name="email">
+                    <input type="email" class="form-control" placeholder="Email" name="email" value="{{ old('email') }}">
                 </div>
                 <div class="form-group text-left">
                     <div class="checkbox checkbox-fill d-inline">

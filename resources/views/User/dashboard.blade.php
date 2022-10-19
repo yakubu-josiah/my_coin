@@ -3,11 +3,11 @@
 
 @section('content')
 
-    <x-AdminComps.dashboard>
-        <x-AdminComps.boardContent />
-    </x-AdminComps.dashboard>
+    <x-UserComps.dashboard>
+        <x-UserComps.boardContent />
+    </x-UserComps.dashboard>
 
-    <x-AdminComps.mainContent>
+    <x-UserComps.mainContent>
 
         <div class="page-header">
             <div class="page-block">
@@ -19,7 +19,7 @@
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{{ route('dashboard') }}"><i
                                         class="feather icon-home"></i></a></li>
-                            <li class="breadcrumb-item"><a href="javascript:">home of Doney </a></li>
+                            <li class="breadcrumb-item"><a href="javascript:">home of {{Auth::user()->username}}</a></li>
                         </ul>
                     </div>
                 </div>
@@ -267,7 +267,7 @@
 
             </div>
         </div>
-    </x-AdminComps.mainContent>
+    </x-UserComps.mainContent>
 
 
 

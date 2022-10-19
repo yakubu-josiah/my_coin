@@ -5,9 +5,9 @@
 
 @section('content')
     
-    <x-AdminComps.dashboard></x-AdminComps.dashboard>
+    <x-UserComps.dashboard></x-UserComps.dashboard>
     
-    <x-AdminComps.mainContent>
+    <x-UserComps.mainContent>
         <div class="page-header">
             <div class="page-block">
                 <div class="row align-items-center">
@@ -64,7 +64,7 @@
 
             </div>
         </div>
-    </x-AdminComps.mainContent>
+    </x-UserComps.mainContent>
 
     @include('partials.twakJS')
 

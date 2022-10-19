@@ -39,9 +39,8 @@
             </a>
         </li>
         <li data-username="Table bootstrap datatable footable" class="nav-item">
-            <a href="{{ route('account') }}" class="nav-link "><span class="pcoded-micon"><i
-                        class="feather icon-server"></i></span><span class="pcoded-mtext">Account
-                    Password</span></a>
+            <a href="{{ route('account') }}" class="nav-link "><span class="pcoded-micon">
+                <i class="feather icon-server"></i></span><span class="pcoded-mtext">Account Information</span></a>
         </li>
         <li class="nav-item pcoded-menu-caption">
             <label>Authentication</label>
