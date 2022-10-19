@@ -101,7 +101,7 @@ class UserController extends Controller
 
         // return back()->with("status", "Password changed successfully!");
 
-        session()->flash('message', "Updated successfully!!");
+        session()->flash('status', "Updated successfully!!");
         return redirect()->route('dashboard');
     }
 }

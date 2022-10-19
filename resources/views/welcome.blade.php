@@ -24,6 +24,8 @@
         <link href="{{ asset('css/venobox.css') }}" rel="stylesheet">
         <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
         <link href="{{ asset('css/owl.carousel.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
 
         
 
@@ -66,8 +68,8 @@
 
         
         <section id="intro">
-
             <div class="intro-container wow fadeIn">
+                <x-HomeComps.successMsg />
                 <h1 class="mb-4 pb-0">The Amazingly Impossible <br><span>ONLINE</span> Auction</h1>
                 <p class="mb-4 pb-0">That empowers you to be better, don`t be fooled by those who say "Impossible is nothing!"</p>
                 <a href="https://youtu.be/EHOL3E-na24" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
