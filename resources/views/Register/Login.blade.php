@@ -6,7 +6,6 @@
     <x-HomeComps.regForm>
         <form class="form-element" method="POST" action="{{ route('login') }}" >
             @csrf
-            <x-HomeComps.errorBag />
             <!-- <input type="hidden" name="form_name" value="loginform"> -->
             <div class="card-body text-center">
                 <div class="mb-4">
@@ -34,6 +33,8 @@
             <p class="mb-2 text-muted">Don't have an account?  <a href="{{ route('register') }}">Signup</a></p>
             {{-- <!-- <p class="mb-0 text-muted">Don’t have an account? <a href="#">Signup</a></p> --> --}}
             </div>
+            <x-HomeComps.errorBag/>
+
         </form>
     </x-HomeComps.regForm>
     @include('partials.twakJS')

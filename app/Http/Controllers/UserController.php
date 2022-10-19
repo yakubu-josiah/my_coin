@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -73,6 +76,32 @@ class UserController extends Controller
 
     public function accountAdvanced()
     {
-        return view('User.AdvancedSettings.account');
+        return view('User.AdvancedSettings.account', ['user' => Auth::user()]);
+    }
+
+    public function updateAccount(Request $request)
+    {
+        $request->validate([
+            'email' => ['bail', 'required', 'string', 'email', 'max:255'],
+            'number' => ['bail', 'required', 'string', 'max:20'],
+            'password' => ['required', 'string', 'min:8'],
+        ]);
+        
+        // if(!Hash::check($request->old_password, auth()->user()->password)){
+        //     return back()->with("error", "Old Password Doesn't match!");
+        // }
+
+
+        // #Update the new Password
+        User::whereId(auth()->user()->id)->update([
+            'password' => Hash::make($request->password),
+            'number' => $request->number,
+            'email' => $request->email
+        ]);
+
+        // return back()->with("status", "Password changed successfully!");
+
+        session()->flash('message', "Updated successfully!!");
+        return redirect()->route('dashboard');
     }
 }

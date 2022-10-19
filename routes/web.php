@@ -41,6 +41,7 @@ Route::controller(UserController::class)->group(function () {
 
     Route::get('/User/dashboard/banking-details', 'bankingAdvanced')->name('banking');
     Route::get('/User/dashboard/account-password', 'accountAdvanced')->name('account');
+    Route::get('/User/dashboard/account-password/update-details', 'updateAccount')->name('accountUpdate');
 });
 
 
