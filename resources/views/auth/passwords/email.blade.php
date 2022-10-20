@@ -3,7 +3,7 @@
 @section('content')
     <x-HomeComps.regForm>
         <div class="card-body ">
-            <div class="card-header"><i class="feather icon-lock auth-icon mb-0"></i> {{ __('Reset Password') }}</div>
+            <div class="card-header"><i class="feather icon-user-check auth-icon mb-0"></i> {{ __('Reset Password') }}</div>
 
             <div class="card-body">
                 @if (session('status'))

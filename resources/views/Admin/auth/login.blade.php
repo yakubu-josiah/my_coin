@@ -8,7 +8,7 @@
             @csrf
             <div class="card-body text-center">
                 <div class="mb-4">
-                    <i class="feather icon-github auth-icon"></i>
+                    <i class="feather icon-users auth-icon"></i>
                 </div>
                 <h3 class="mb-4">Admin Login</h3>
                 <p class="mb-0 text-muted"> </p>

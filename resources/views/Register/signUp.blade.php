@@ -6,7 +6,7 @@
     <x-HomeComps.regForm>
         <div class="card-body text-center">
             <div class="mb-4">
-                <i class="feather icon-check-plus user-plus auth-icon"></i>
+                <i class="feather icon-user-plus auth-icon"></i>
             </div>
             <form action="{{ route('register') }}" method="POST">
                 @csrf 
