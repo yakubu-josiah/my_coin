@@ -27,7 +27,7 @@ Auth::routes();
 //     ->name('signUp');
 
 Route::controller(UserController::class)->group(function () {
-    Route::get('/User', 'index')->name('admin.index');
+    Route::get('/User', 'index')->name('index');
     Route::get('/User/archived', 'archived')->name('archived');
     Route::get('/User/dashboard', 'dashboard')->name('dashboard');
     Route::get('/User/dashboard/view-auction', 'viewAuction')->name('viewAuction');

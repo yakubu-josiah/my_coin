@@ -1,4 +1,4 @@
-@extends('partials.layoutAdmin')
+@extends('partials.userLayout')
 
 
 @section('content')
