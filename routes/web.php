@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RegistrationController;
 use Illuminate\Support\Facades\Route;
@@ -44,7 +45,9 @@ Route::controller(UserController::class)->group(function () {
     Route::get('/User/dashboard/account-password/update-details', 'updateAccount')->name('accountUpdate');
 });
 
-
+Route::controller(AdminController::class)->group(function () {
+    Route::get('/Admin/login', 'adminLogin');
+});
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
