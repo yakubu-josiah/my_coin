@@ -14,4 +14,8 @@ class AdminController extends Controller
     {
         return view('Admin.auth.register');
     }
+    public function adminDash()
+    {
+        return view('Admin.pages.dashboard');
+    }
 }

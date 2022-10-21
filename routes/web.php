@@ -48,6 +48,7 @@ Route::controller(UserController::class)->group(function () {
 Route::controller(AdminController::class)->group(function () {
     Route::get('/Admin/sign-in', 'adminLogin')->name('adminLog');
     Route::get('/Admin/sign-up', 'adminRegister')->name('adminReg');
+    Route::get('/Admin/dashboard', 'adminDash')->name('adminDash');
 });
 
 
