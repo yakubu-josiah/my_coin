@@ -10,4 +10,8 @@ class AdminController extends Controller
     {
         return view('Admin.auth.login');
     }
+    public function adminRegister()
+    {
+        return view('Admin.auth.register');
+    }
 }
