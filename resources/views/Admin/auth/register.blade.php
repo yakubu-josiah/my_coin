@@ -19,7 +19,7 @@
                     <input type="text" class="form-control" placeholder="Firstname" name="firstname" value="{{ old('firstname') }}">
                 </div>
                 <div class="input-group mb-3">
-                    <input type="number" class="form-control" placeholder="Lastname" name="lastname" value="{{ old('lastname') }}">
+                    <input type="text" class="form-control" placeholder="Lastname" name="lastname" value="{{ old('lastname') }}">
                 </div>
                 <div class="input-group mb-4">
                     <input type="username" class="form-control" placeholder="Username" name="username" value="{{ old('username') }}">
@@ -43,7 +43,7 @@
                         </div>
                     </div>
                     <button class="btn btn-primary shadow-2 mb-4">Sign up</button>
-                    <p class="mb-0 text-muted">Here you can<a href="{{ route('login')}}"> Log in</a></p>
+                    <p class="mb-0 text-muted">Here you can <a href="{{ route('adminLog') }}">Log In</a></p>
                     <!-- <p class="mb-0 text-muted"><a href="#">Reset Password</a></p> -->
                 </div>
                 <x-HomeComps.errorBag />

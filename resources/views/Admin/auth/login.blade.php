@@ -28,7 +28,7 @@
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary shadow-2 mb-4">Login</button>
-                <p class="mb-2 text-muted">Create new account?  <a href="{{ route('register') }}">Signup</a></p>
+                <p class="mb-2 text-muted">Need new Admin Account? <a href="{{ route('adminReg') }}">Signup</a></p>
             </div>
             <x-HomeComps.errorBag/>
 
