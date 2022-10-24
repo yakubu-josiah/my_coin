@@ -347,7 +347,7 @@
 
         <script src="{{ asset('js/main.js')}}" type="2e0e928d6bf62a8ea0d2b6c2-text/javascript"></script>
 
-        <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="2e0e928d6bf62a8ea0d2b6c2-|49" defer=""></script>
+        <script src="{{ asset('js/rocket-loader.min.js')}}" data-cf-settings="2e0e928d6bf62a8ea0d2b6c2-|49" defer=""></script>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
