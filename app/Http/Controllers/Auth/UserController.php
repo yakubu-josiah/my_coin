@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Auth;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -14,20 +15,9 @@ class UserController extends Controller
         $this->middleware('auth');
     }
 
-    public function index()
-    {
-        return view('User.index');
-    }
+    
 
-    public function archived()
-    {
-        return view('User.archive');
-    }
-
-    public function dashboard()
-    {
-        return view('User.dashboard');
-    }
+    
 
     public function viewAuction()
     {

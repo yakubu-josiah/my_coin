@@ -3,6 +3,8 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RegistrationController;
+use App\Http\Controllers\UserController\AuctionController;
+use App\Http\Controllers\UserController\SettingsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,10 +29,23 @@ Auth::routes();
 // Route::get('/registration', [RegistrationController::class, 'signup'])
 //     ->name('signUp');
 
+
+Route::group(['prefix' => 'User'], function(){
+    Route::controller(SettingsController::class)->group(function () {
+        Route::get('/', 'index')->name('index');
+        Route::get('/archived', 'archived')->name('archived');
+        Route::get('/dashboard', 'dashboard')->name('dashboard');
+    });
+    
+    
+    Route::controller(AuctionController::class)->group(function () {
+        Route::get('auctions', 'index')->name('index');
+    });
+});
+
+
+
 Route::controller(UserController::class)->group(function () {
-    Route::get('/User', 'index')->name('index');
-    Route::get('/User/archived', 'archived')->name('archived');
-    Route::get('/User/dashboard', 'dashboard')->name('dashboard');
     Route::get('/User/dashboard/view-auction', 'viewAuction')->name('viewAuction');
     Route::get('/User/dashboard/pay-bids', 'payAuction')->name('payBids');
     Route::get('/User/dashboard/receive-payments', 'receiveAuction')->name('receivePay');
