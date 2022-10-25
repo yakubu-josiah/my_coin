@@ -5,15 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Auction extends Model
+class ReferralCommission extends Model
 {
-    protected $fillable = [
+    protected $fillabe = 
+    [
+        'user_id',
+        'referree_id',
+        'order_id',
         'amount',
-        'received',
+        'bonus',
         'status',
-        'is_on',
-        'is_recommit',
-        'matured_date'
+		'remark',
     ];
     use HasFactory;
 }

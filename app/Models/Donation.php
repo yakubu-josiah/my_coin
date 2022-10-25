@@ -5,30 +5,22 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Order extends Model
+class Donation extends Model
 {
-    protected $fillable = [
+    protected $fillabe = 
+    [
+        'user_id',
         'withdrawal_id',
         'recmit_donotn_id',
-        'payer_id',
-        'payee_id',
+        'is_comit',
         'amount',
         'interest',
+        'paid',
         'total',
         'status',
-        'auto_approve',
-        'pop',
-        'pop_date',
-        'payer_message',
-        'payee_message',
-        'duration',
+        'withdrawal_status',
         'matured_date',
-        'order_timer',
-        'payee_timer',
-        'date_paid',
+        'auto_merge_timer',
     ];
     use HasFactory;
-
-
-
 }

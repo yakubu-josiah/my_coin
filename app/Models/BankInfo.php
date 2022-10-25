@@ -5,16 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class UserSettings extends Model
+class BankInfo extends Model
 {
-    protected $fillable = 
+    protected $fillabe = 
     [
-        'id',
-        'user_id',
+        'user_id',	
         'account_name',
-        'accoumt_number',
-        'bank_name',
-        'account_type'
+        'account_number',
+        'bank',        
+        'account_type',
+        'currency',
     ];
+    
     use HasFactory;
 }

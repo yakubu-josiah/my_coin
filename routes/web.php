@@ -37,10 +37,12 @@ Route::group(['prefix' => 'User'], function(){
         Route::get('/dashboard', 'dashboard')->name('dashboard');
     });
     
-    
-    Route::controller(AuctionController::class)->group(function () {
-        Route::get('auctions', 'index')->name('index');
+    Route::group(['prefix' => 'auction'], function(){
+        Route::controller(AuctionController::class)->group(function () {
+            Route::get('view', 'index')->name('auctionViewIndex');
+        });
     });
+    
 });
 
 
