@@ -6,14 +6,20 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-    public function adminLogin()
+
+    public function __construct()
     {
-        return view('Admin.auth.login');
+        $this->middleware('auth');
     }
-    public function adminRegister()
-    {
-        return view('Admin.auth.register');
-    }
+
+    // public function adminLogin()
+    // {
+    //     return view('Admin.auth.login');
+    // }
+    // public function adminRegister()
+    // {
+    //     return view('Admin.auth.register');
+    // }
     public function adminDash()
     {
         return view('Admin.pages.dashboard');
