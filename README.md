@@ -20,6 +20,7 @@ My Coin Auction is a fast growing online platform that enables you to participat
 - **[Used simple and expressive methods to define URI's routing](https:/)**
 - **[Schemas builder method used to configure mysql DB connection](https:/)**
 - **[Usage of the CSRf protection unauthorized from commands that are performed on behalf of an authenticated user](https:/)**
+- **[JeStream installation using Livewire library for Authentication](https:/)**
 
 
 
