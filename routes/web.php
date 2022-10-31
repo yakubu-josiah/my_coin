@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\UserController\AuctionController;
 use App\Http\Controllers\UserController\SettingsController;
 use Illuminate\Support\Facades\Auth;
@@ -66,7 +65,13 @@ Route::controller(UserController::class)->group(function () {
 Route::controller(AdminController::class)->group(function () {
     Route::get('/Admin/sign-in', 'adminLogin')->name('adminLog');
     Route::get('/Admin/sign-up', 'adminRegister')->name('adminReg');
-    Route::get('/Admin/dashboard', 'adminDash')->name('adminDash');
+    Route::post('/Admin/submit-login', 'adminSubmitLogin')->name('adminSubmitLogin');
+});
+
+Route::middleware("adminAuth")->group(function () {
+    Route::controller(AdminController::class)->group(function () {
+        Route::get('/Admin/dashboard', 'adminDash')->name('adminDash');
+    });
 });
 
 
