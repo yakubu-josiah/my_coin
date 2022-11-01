@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserController\AuctionController;
 use App\Http\Controllers\UserController\SettingsController;
@@ -24,10 +25,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-// Route::get('/login', [RegistrationController::class, 'login'])
-//     ->name('login');
-// Route::get('/registration', [RegistrationController::class, 'signup'])
-//     ->name('signUp');
+Route::get('/login', [RegistrationController::class, 'login'])
+    ->name('login');
+Route::get('/registration', [RegistrationController::class, 'signup'])
+    ->name('signUp');
 
 
 Route::group(['prefix' => 'User'], function(){
@@ -73,7 +74,3 @@ Route::middleware("adminAuth")->group(function () {
         Route::get('/Admin/dashboard', 'adminDash')->name('adminDash');
     });
 });
-
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
