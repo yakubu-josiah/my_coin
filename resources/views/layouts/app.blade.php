@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        {{-- <title>{{ config('app.name', 'My Coin') }}</title> --}}
         <title>My Coin Auction @yield('title')</title>
 
 
@@ -22,8 +21,7 @@
         <!-- animation css -->
         <link rel="stylesheet" href="{{ asset('css/animate.min.css') }}">
         <!-- vendor css -->
-        {{-- <link rel="stylesheet" href="https://mca-official.live/assets/css/style.css"> --}}
-        {{-- <link href="{{ asset('css/style.css') }}" rel="stylesheet"> --}}
+        <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
         <!-- Styles -->
         @livewireStyles
@@ -52,7 +50,5 @@
         @stack('modals')
 
         @livewireScripts
-    @include('partials.twakJS')
-
     </body>
 </html>

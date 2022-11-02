@@ -44,7 +44,7 @@
         </li>
         <li data-username="Table bootstrap datatable footable" class="nav-item">
             <a href="{{ Route('profile.show') }}" class="nav-link "><span class="pcoded-micon">
-                <i class="feather icon-user"></i></span><span class="pcoded-mtext">Your Profile</span></a>
+                <i class="feather icon-user"></i></span><span class="pcoded-mtext">Profile Settings</span></a>
         </li>
         <li class="nav-item pcoded-menu-caption">
             <label>Authentication</label>
