@@ -85,11 +85,11 @@
                     </div>
                 </div>
 
-                <div class="row">
+                {{-- <div class="row">
                     @foreach ($auctions as $a)
                     
                     @endforeach
-                </div>
+                </div> --}}
             </div>
         </div>
 

@@ -19,7 +19,7 @@
                 <i class="feather icon-box"></i></span><span class="pcoded-mtext">Auction Menu</span>
             </a>
             <ul class="pcoded-submenu">
-                <li class=""><a href="{{ route('auctionViewIndex') }}" class="">View Auction</a></li>
+                <li class=""><a href="{{ route('viewAuction') }}" class="">View Auction</a></li>
                 <li class=""><a href="{{ route('payBids') }}" class="">Pay Bids</a></li>
                 <li class=""><a href="{{ route('receivePay') }}" class="">Receive Payments</a></li>
                 <li class=""><a href="{{ route('bidMsg') }}" class="">BID Messages</a></li>
@@ -41,6 +41,10 @@
         <li data-username="Table bootstrap datatable footable" class="nav-item">
             <a href="{{ route('account') }}" class="nav-link "><span class="pcoded-micon">
                 <i class="feather icon-server"></i></span><span class="pcoded-mtext">Account Information</span></a>
+        </li>
+        <li data-username="Table bootstrap datatable footable" class="nav-item">
+            <a href="{{ Route('profile.show') }}" class="nav-link "><span class="pcoded-micon">
+                <i class="feather icon-user"></i></span><span class="pcoded-mtext">Your Profile</span></a>
         </li>
         <li class="nav-item pcoded-menu-caption">
             <label>Authentication</label>

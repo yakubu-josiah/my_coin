@@ -23,12 +23,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
-
-Route::get('/login', [RegistrationController::class, 'login'])
-    ->name('login');
-Route::get('/registration', [RegistrationController::class, 'signup'])
-    ->name('signUp');
+// Route::get('/login', [RegistrationController::class, 'login'])
+//     ->name('login');
+// Route::get('/registration', [RegistrationController::class, 'signup'])
+//     ->name('signUp');
 
 
 Route::group(['prefix' => 'User'], function(){
@@ -58,7 +56,7 @@ Route::controller(UserController::class)->group(function () {
     Route::get('/User/dashboard/affiliates', 'affiliateAuction')->name('affiliates');
     Route::get('/User/dashboard/histories', 'historyAuction')->name('history');
 
-    Route::get('/User/dashboard/banking-details', 'bankingAdvanced')->name('banking');
+    Route::get('/User/dashboard/    ', 'bankingAdvanced')->name('banking');
     Route::get('/User/dashboard/account-password', 'accountAdvanced')->name('account');
     Route::get('/User/dashboard/account-password/update-details', 'updateAccount')->name('accountUpdate');
 });

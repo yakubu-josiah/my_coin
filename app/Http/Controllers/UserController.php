@@ -1,6 +1,6 @@
 <?php
 
-// namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 
@@ -8,6 +8,7 @@ class UserController extends Controller
 {
     public function viewAuction()
     {
+        return view('User.AuctionMenu.viewAuction');
     }
 
     public function payAuction()
