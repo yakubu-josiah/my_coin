@@ -31,6 +31,11 @@
                                         <label for="number" class="form-label h5">Mobile Number +27</label>
                                         <input type="text" class="custom-select" 
                                             name="number" value="{{ $user->number }}" >
+                                            
+                                        <p></p>
+                                        <label for="name" class="form-label h5">First Name</label>
+                                        <input type="text" class="custom-select" 
+                                            name="name" value="{{ $user->name }}" >
                                         <p></p>
                                         
                                         <label for="email" class="form-label h5">Email</label>

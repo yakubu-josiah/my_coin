@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -51,10 +52,10 @@ class UserController extends Controller
         return view('User.AdvancedSettings.bankDetails');
     }
 
-    // public function accountAdvanced()
-    // {
-    //     return view('User.AdvancedSettings.account', ['user' => Auth::user()]);
-    // }
+    public function accountAdvanced()
+    {
+        return view('User.AdvancedSettings.account', ['user' => Auth::User()]);
+    }
 
         // if(!Hash::check($request->old_password, auth()->user()->password)){
         //     return back()->with("error", "Old Password Doesn't match!");

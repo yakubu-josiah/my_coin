@@ -1,60 +1,56 @@
-<x-guest-layout>
-    <x-jet-authentication-card>
-        <x-slot name="logo">
-            <x-jet-authentication-card-logo />
-        </x-slot>
+@extends('partials.userLayout')
+@section('title', '- Login')
 
-        <x-jet-validation-errors class="mb-4" />
+@section('content')
 
-        <form method="POST" action="{{ route('register') }}">
-            @csrf
-
-            <div>
-                <x-jet-label for="name" value="{{ __('Name') }}" />
-                <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+    <x-HomeComps.regForm>
+        <div class="card-body text-center">
+            <div class="mb-4">
+                <i class="feather icon-user-plus auth-icon"></i>
             </div>
-
-            <div class="mt-4">
-                <x-jet-label for="email" value="{{ __('Email') }}" />
-                <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
-            </div>
-
-            <div class="mt-4">
-                <x-jet-label for="password" value="{{ __('Password') }}" />
-                <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
-            </div>
-
-            <div class="mt-4">
-                <x-jet-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
-                <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
-            </div>
-
-            @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
-                <div class="mt-4">
-                    <x-jet-label for="terms">
-                        <div class="flex items-center">
-                            <x-jet-checkbox name="terms" id="terms"/>
-
-                            <div class="ml-2">
-                                {!! __('I agree to the :terms_of_service and :privacy_policy', [
-                                        'terms_of_service' => '<a target="_blank" href="'.route('terms.show').'" class="underline text-sm text-gray-600 hover:text-gray-900">'.__('Terms of Service').'</a>',
-                                        'privacy_policy' => '<a target="_blank" href="'.route('policy.show').'" class="underline text-sm text-gray-600 hover:text-gray-900">'.__('Privacy Policy').'</a>',
-                                ]) !!}
-                            </div>
-                        </div>
-                    </x-jet-label>
+            <form action="{{ route('register') }}" method="POST">
+                @csrf 
+                <h3 class="mb-4">Sign up</h3>
+                <p class="mb-0 text-muted">We welcome you to our family</p>
+                <hr>
+                <p class="mb-0 text-muted"> </p>
+                <hr>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="First Name" name="name" value="{{ old('name') }}" autofocus autocomplete="name">
                 </div>
-            @endif
-
-            <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
-                </a>
-
-                <x-jet-button class="ml-4">
-                    {{ __('Register') }}
-                </x-jet-button>
-            </div>
-        </form>
-    </x-jet-authentication-card>
-</x-guest-layout>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Username" name="username" value="{{ old('username') }}" autofocus autocomplete="username">
+                </div>
+                <div class="input-group mb-3">
+                    <input type="number" class="form-control" placeholder="Mobile Number +27" name="number" value="{{ old('number') }}" autofocus autocomplete="number">
+                </div>
+                <div class="input-group mb-4">
+                    <input type="password" class="form-control" placeholder="Password" name="password" autofocus autocomplete="password">
+                </div>
+                <div class="input-group mb-4">
+                    <input type="password" class="form-control" placeholder="Confirm Password" name="password_confirmation" autofocus autocomplete="password_confirmation">
+                </div>
+                <div class="input-group mb-4">
+                    <input type="email" class="form-control" placeholder="Email" name="email" value="{{ old('email') }}" autofocus autocomplete="email">
+                </div>
+                <div class="form-group text-left">
+                    <div class="checkbox checkbox-fill d-inline">
+                        <input type="checkbox" name="checkbox-fill-1" id="checkbox-fill-1" checked="">
+                        <label for="checkbox-fill-1" class="cr"> Save Details</label>
+                    </div>
+                </div>
+                <div class="form-group text-left">
+                    <div class="checkbox checkbox-fill d-inline">
+                        <label for="checkbox-fill-2" class="cr">Mobile number must be in this format
+                            (+27840000001)</label>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary shadow-2 mb-4">Sign up</button>
+                    <p class="mb-0 text-muted">Already have an account? <a href="{{ route('login')}}"> Log in</a></p>
+                    <!-- <p class="mb-0 text-muted"><a href="#">Reset Password</a></p> -->
+                </div>
+                <x-HomeComps.errorBag />
+            </form>
+    </x-HomeComps.regForm>
+    @include('partials.twakJS')        
+@endsection    
