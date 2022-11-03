@@ -67,8 +67,18 @@ Route::controller(AdminController::class)->group(function () {
     Route::post('/Admin/submit-login', 'adminSubmitLogin')->name('adminSubmitLogin');
 });
 
-Route::middleware("adminAuth")->group(function () {
-    Route::controller(AdminController::class)->group(function () {
-        Route::get('/Admin/dashboard', 'adminDash')->name('adminDash');
+Route::group(['prefix' => 'Admin'], function (){
+    Route::middleware(['admin:admin'])->group(function () {
+        Route::controller(AdminController::class)->group(function(){
+            Route::get('/dashboard', 'adminDash')->name('adminDash');
+        });
     });
 });
+
+
+
+// Route::group(function () {
+//     Route::controller(AdminController::class)->group(function () {
+//         Route::get('/Admin/dashboard', 'adminDash')->name('adminDash');
+//     });
+// });

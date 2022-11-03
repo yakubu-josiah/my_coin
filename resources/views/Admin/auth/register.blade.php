@@ -30,6 +30,9 @@
                 <div class="input-group mb-4">
                     <input type="password" class="form-control" placeholder="Password" name="password">
                 </div>
+                <div class="input-group mb-4">
+                    <input type="password_confirmation" class="form-control" placeholder="Confirm Password" name="password_confirmation">
+                </div>
                 <div class="form-group text-left">
                     <div class="checkbox checkbox-fill d-inline">
                         <input type="checkbox" name="checkbox-fill-1" id="checkbox-fill-1" checked="">
