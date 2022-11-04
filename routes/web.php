@@ -61,16 +61,18 @@ Route::controller(UserController::class)->group(function () {
     Route::get('/User/dashboard/account-password/update-details', 'updateAccount')->name('accountUpdate');
 });
 
-Route::controller(AdminController::class)->group(function () {
-    Route::get('/Admin/sign-in', 'adminLogin')->name('adminLog');
-    Route::get('/Admin/sign-up', 'adminRegister')->name('adminReg');
-    Route::post('/Admin/submit-login', 'adminSubmitLogin')->name('adminSubmitLogin');
+Route::middleware(['admin:admin'])->group(function () {
+    Route::controller(AdminController::class)->group(function () {
+        Route::get('/Admin/sign-in', 'adminLogin')->name('adminLog');
+        Route::get('/Admin/sign-up', 'adminRegister')->name('adminReg');
+        Route::post('/Admin/submit-login', 'adminSubmitLogin')->name('adminSubmitLogin');
+    });
 });
 
 Route::group(['prefix' => 'Admin'], function (){
-    Route::middleware(['admin:admin'])->group(function () {
+    Route::middleware(['auth:sanctum,admin', config('jetstream.auth_session'), 'verified'])->group(function () {
         Route::controller(AdminController::class)->group(function(){
-            Route::get('/dashboard', 'adminDash')->name('adminDash');
+            Route::get('/dashboard', 'adminDash')->name('adminDash')->middleware('auth:admin');
         });
     });
 });
