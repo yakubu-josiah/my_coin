@@ -1,11 +1,9 @@
 <?php
 
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserController\AuctionController;
 use App\Http\Controllers\UserController\SettingsController;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,12 +20,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
-// Route::get('/login', [RegistrationController::class, 'login'])
-//     ->name('login');
-// Route::get('/registration', [RegistrationController::class, 'signup'])
-//     ->name('signUp');
-
 
 Route::group(['prefix' => 'User'], function(){
     Route::controller(SettingsController::class)->group(function () {
@@ -56,31 +48,23 @@ Route::controller(UserController::class)->group(function () {
     Route::get('/User/dashboard/affiliates', 'affiliateAuction')->name('affiliates');
     Route::get('/User/dashboard/histories', 'historyAuction')->name('history');
 
-    Route::get('/User/dashboard/    ', 'bankingAdvanced')->name('banking');
+    Route::get('/User/dashboard/banking', 'bankingAdvanced')->name('banking');
     Route::get('/User/dashboard/account-password', 'accountAdvanced')->name('account');
     Route::get('/User/dashboard/account-password/update-details', 'updateAccount')->name('accountUpdate');
 });
 
-Route::middleware(['admin:admin'])->group(function () {
+Route::group(['prefix' => 'admin'], function (){
     Route::controller(AdminController::class)->group(function () {
-        Route::get('/Admin/sign-in', 'adminLogin')->name('adminLog');
-        Route::get('/Admin/sign-up', 'adminRegister')->name('adminReg');
-        Route::post('/Admin/submit-login', 'adminSubmitLogin')->name('adminSubmitLogin');
+        Route::get('/login', 'create')->name('adminLog');
+        Route::post('/login', 'store')->name('adminStr');
+        Route::get('/sign-up', 'adminRegister')->name('adminReg');
     });
 });
 
-Route::group(['prefix' => 'Admin'], function (){
-    Route::middleware(['auth:sanctum,admin', config('jetstream.auth_session'), 'verified'])->group(function () {
+Route::middleware('admin:admin')->group(function (){
+    Route::group(['prefix' => 'admin'], function (){
         Route::controller(AdminController::class)->group(function(){
-            Route::get('/dashboard', 'adminDash')->name('adminDash')->middleware('auth:admin');
+            Route::get('/dashboard', 'adminDash')->name('adminDash');
         });
     });
 });
-
-
-
-// Route::group(function () {
-//     Route::controller(AdminController::class)->group(function () {
-//         Route::get('/Admin/dashboard', 'adminDash')->name('adminDash');
-//     });
-// });

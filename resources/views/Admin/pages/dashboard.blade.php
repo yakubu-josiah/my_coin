@@ -36,7 +36,13 @@
                                     <b>Admin dashboard </b>
                                 </h3>   
                                 <h6 class="text-muted mt-4 mb-0">
-                                    <a href="{{ route('adminDash') }}" class="btn btn-secondary">Got It</a>
+                                    <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> 
+                                        <span class="pcoded-micon"><i class="feather icon-power"></i></span>
+                                        <span class="pcoded-mtext">Sign Out</span>
+                                     </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
                                 </h6>
                                 <hr>
                                 <a href="{{ route('adminDash') }}">View previous notifications</a>

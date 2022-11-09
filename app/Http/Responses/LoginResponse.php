@@ -4,6 +4,7 @@ namespace App\Http\Responses;
 
 use Laravel\Fortify\Contracts\LoginResponse as LoginResponseContract;
 use Laravel\Fortify\Fortify;
+use App\Actions\Fortify\RedirectIfTwoFactorAuthenticatable as Redirects;
 
 class LoginResponse implements LoginResponseContract
 {
@@ -18,6 +19,7 @@ class LoginResponse implements LoginResponseContract
         return $request->wantsJson()
                     ? response()->json(['two_factor' => false])
                     
-                    : redirect()->intended('Admin/dashboard');
+                    // : redirect()->intended('login')->with("status", "Login Success!!");
+                    : redirect()->route('/admin/dashboard');
     }
 }

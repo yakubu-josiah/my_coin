@@ -19,14 +19,13 @@ class AdminRedirectIfAuthenticated
      */
     public function handle(Request $request, Closure $next, ...$guards)
     {
-        $guards = empty($guards) ? [null] : $guards;
-
-        foreach ($guards as $guard) {
-            if (Auth::guard($guard)->check()) {
-                return redirect($guard. '/dashboard');
-            }
+        if (Auth::guard('admin')->user()) {
+            return $next($request);
         }
-
-        return $next($request);
+        if ($request->ajax() || $request->wantsJson()) {
+            return response('Unauthorized.', 401);
+        } else {
+            return redirect(route('adminLog'));
+        }
     }
 }

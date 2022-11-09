@@ -4,7 +4,7 @@
 @section('content')
 
     <x-HomeComps.regForm>
-        <form class="form-element" method="POST" action="{{ route('adminSubmitLogin') }}" >
+        <form class="form-element" method="POST" action="{{ route('adminLog')  }}" >
             @csrf
             <div class="card-body text-center">
                 <div class="mb-4">
