@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Contracts\Auth\StatefulGuard;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Laravel\Fortify\Http\Requests\LoginRequest;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
+use Laravel\Fortify\Contracts\CreatesNewUsers;
+use Laravel\Fortify\Contracts\RegisterResponse;
+ 
 
 class AdminController extends Controller
 {
@@ -41,13 +43,22 @@ class AdminController extends Controller
      */
     public function create(Request $request)
     {
-        if (Auth::guard('admin')->user()) {
+        if (auth()->guard('admin')->user()) {
             return redirect()->route('/admin/dashborad');
         } else {
             return view('admin.auth.login');
         }
     }
 
+    public function reg(Request $request,
+        CreatesNewUsers $creator): RegisterResponse
+    {
+        event(new Registered($user = $creator->create($request->all())));
+
+        $this->guard->login($user);
+
+        return app(RegisterResponse::class);
+    }
     /**
      * Attempt to authenticate a new session.
      *
@@ -57,8 +68,8 @@ class AdminController extends Controller
     public function store(LoginRequest $request)
     {
         $validator = Validator::make($request->all(), [
-            'email' => 'required',
-            'password' => 'required',
+            'email' => 'bail|required|email',
+            'password' => 'required'
             ]);
 
             if ($validator->fails()) {
@@ -68,10 +79,17 @@ class AdminController extends Controller
             }
             $email = $request->email;
             $password = $request->password;
-            if (Auth::guard('admin')->attempt(['email' => $email, 'password' => $password])) {
+            if (auth()->guard('admin')->attempt(['email' => $email, 'password' => $password])) {
                 return redirect()->route('adminDash');
             }else{
-                return back()->withErrors(['credientials does not match']);
+                return back()->withInput($request->only('email'))->withErrors(['Opps!! Your credientials does not match our records']);
             }
+    }
+
+    public function adminLogout(Request $request)
+    {
+        auth()->guard('admin')->logout();
+        $request->session()->invalidate();
+        return redirect()->route('adminLog');
     }
 }

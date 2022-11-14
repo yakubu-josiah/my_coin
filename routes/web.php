@@ -58,6 +58,8 @@ Route::group(['prefix' => 'admin'], function (){
         Route::get('/login', 'create')->name('adminLog');
         Route::post('/login', 'store')->name('adminStr');
         Route::get('/sign-up', 'adminRegister')->name('adminReg');
+        Route::post('/register', 'reg')->name('adminRegs');
+        Route::post('/sign-out', 'adminLogout')->name('sign_out');
     });
 });
 

@@ -8,7 +8,7 @@
             <div class="mb-4">
                 <i class="feather icon-user-plus auth-icon"></i>
             </div>
-            <form action="{{ route('adminStr') }}" method="POST">
+            <form action="{{ route('adminRegs') }}" method="POST">
                 @csrf 
                 <h3 class="mb-4">Admin Registration</h3>
                 <p class="mb-0 text-muted">Fill the form if you'll like to register an Admin</p>

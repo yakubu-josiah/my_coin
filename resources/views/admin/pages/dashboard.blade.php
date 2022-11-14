@@ -36,11 +36,11 @@
                                     <b>Admin dashboard </b>
                                 </h3>   
                                 <h6 class="text-muted mt-4 mb-0">
-                                    <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> 
+                                    <a class="nav-link" href="{{ route('sign_out') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> 
                                         <span class="pcoded-micon"><i class="feather icon-power"></i></span>
                                         <span class="pcoded-mtext">Sign Out</span>
                                      </a>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    <form id="logout-form" action="{{ route('sign_out') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
                                 </h6>
