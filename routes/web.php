@@ -6,6 +6,7 @@ use App\Http\Controllers\UserController\AuctionController;
 use App\Http\Controllers\UserController\SettingsController;
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,20 +22,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prefix' => 'User'], function(){
-    Route::controller(SettingsController::class)->group(function () {
-        Route::get('/', 'index')->name('index');
-        Route::get('/archived', 'archived')->name('archived');
-        Route::get('/dashboard', 'dashboard')->name('dashboard');
+Route::middleware('auth:sanctum', config('jetstream.auth_session'),'verified')->group(function (){
+    Route::group(['prefix' => 'User'], function(){
+        Route::controller(SettingsController::class)->group(function () {
+            Route::get('/', 'index')->name('index');
+            Route::get('/archived', 'archived')->name('archived');
+            Route::get('/dashboard', 'dashboard')->name('dashboard');
+        });
     });
-    
     Route::group(['prefix' => 'auction'], function(){
         Route::controller(AuctionController::class)->group(function () {
             Route::get('view', 'index')->name('auctionViewIndex');
         });
     });
-    
+      
 });
+   
 
 
 
