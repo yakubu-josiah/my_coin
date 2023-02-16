@@ -20,7 +20,7 @@
                 <div class="input-group mb-2">
                     <input type="password" class="form-control" placeholder="Password" name="password" required>
                 </div>
-                <p class="mb-0 text-right"> <a href="{{ route('password.request') }}" class="mb-0 text-muted"> Forgot Password?</a></p> 
+                <p class="mb-0 text-right"> <a href="{{ route('vrfy-admin') }}" class="mb-0 text-muted"> Forgot Password?</a></p> 
                 <div class="form-group text-left">
                     <div class="checkbox checkbox-fill d-inline">
                         <input type="checkbox" name="checkbox-fill-1" id="checkbox-fill-a1" checked="">
