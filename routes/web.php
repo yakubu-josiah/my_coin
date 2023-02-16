@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserController\AuctionController;
 use App\Http\Controllers\UserController\SettingsController;
@@ -56,20 +55,4 @@ Route::controller(UserController::class)->group(function () {
     Route::get('/User/dashboard/account-password/update-details', 'updateAccount')->name('accountUpdate');
 });
 
-Route::group(['prefix' => 'admin'], function (){
-    Route::controller(AdminController::class)->group(function () {
-        Route::get('/login', 'create')->name('adminLog');
-        Route::post('/login', 'store')->name('adminStr');
-        Route::get('/sign-up', 'adminRegister')->name('adminReg');
-        Route::post('/register', 'reg')->name('adminRegs');
-        Route::post('/sign-out', 'adminLogout')->name('sign_out');
-    });
-});
-
-Route::middleware('admin:admin')->group(function (){
-    Route::group(['prefix' => 'admin'], function (){
-        Route::controller(AdminController::class)->group(function(){
-            Route::get('/dashboard', 'adminDash')->name('adminDash');
-        });
-    });
-});
+require 'Admin.php';
