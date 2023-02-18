@@ -19,7 +19,8 @@ Route::group(['prefix' => 'admin/verification'], function(){
     Route::controller(VerificationController::class)->group(function(){
         Route::get('/forgot-password/verify', 'forgotPassword')->name('vrfy-form');
         Route::post('/email-verify/check-credentials', 'validateEmail')->name('vrfy-email');
-        Route::get('/email-sent/code-verification', 'codeVerify')->name('vrfy-emailCode');
+        Route::get('/email-sent/code-verification/{id}', 'codeVerify')->name('vrfy-emailCode');
+        Route::get('/email-sent/verifying/email-code', 'verifiyingCode')->name('vrfy-code');
     });
 });
 

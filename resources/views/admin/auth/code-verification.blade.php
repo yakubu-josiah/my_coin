@@ -4,7 +4,7 @@
 @section('content')
 
     <x-HomeComps.regForm>
-        <form class="form-element" method="POST" action="{{ route('adminLog')  }}" >
+        <form class="form-element" method="POST" action="{{ route('vrfy-code', [$userId->id])  }}" >
             @csrf
             <div class="card-body text-center">
                 <div class="mb-4">
