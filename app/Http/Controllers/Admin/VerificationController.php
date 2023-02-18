@@ -13,7 +13,7 @@ class VerificationController extends Controller
     {
         return view('admin.auth.forgot-password');
     }
-    public function forgotPasswordValidate(Request $request){
+    public function validateEmail(Request $request){
         $request->validate([
             'email' => 'required|email'
         ]);
@@ -24,7 +24,7 @@ class VerificationController extends Controller
 
             $user['token'] = $token;
             $user->save();
-            // $user['is_verified'] = 0;
+            $user['is_verified'] = 0;
     
             // Mail::to($request->email)->send(new ResetPassword($user->username, $token));
 
@@ -35,4 +35,7 @@ class VerificationController extends Controller
         return back()->with('failed', 'Failed! email is not registered');
     }
 
+    public function codeVerify(){
+        return view('admin.auth.code-verification');
+    }
 }
