@@ -55,4 +55,4 @@ Route::controller(UserController::class)->group(function () {
     Route::get('/User/dashboard/account-password/update-details', 'updateAccount')->name('accountUpdate');
 });
 
-require 'Admin.php';
+require 'admin.php';
