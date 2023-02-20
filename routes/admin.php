@@ -20,9 +20,10 @@ Route::group(['prefix' => 'admin/verification'], function(){
         Route::get('/forgot-password/verify', 'forgotPassword')->name('vrfy-form');
         Route::post('/email-verify/check-credentials', 'validateEmail')->name('vrfy-email');
         Route::get('/email-sent/code-verification/{id}', 'codeVerify')->name('vrfy-emailCode');
-        Route::get('/email-sent/verifying/email-code', 'verifiyingCode')->name('vrfy-code');
-        Route::get('/password/change-new-password/', 'newPassword')->name('vrfy-newPass');
-        
+        Route::post('/email-sent/verifying/email-code/{id}', 'verifiyingCode')->name('vrfy-code');
+        Route::get('/password/change-new-password/{id}', 'newPassword')->name('vrfy-newPass');
+        Route::put('/password/change/update/{id}/submit', 'updatePassword')->name('vrfy-updatePass');
+
     });
 });
 

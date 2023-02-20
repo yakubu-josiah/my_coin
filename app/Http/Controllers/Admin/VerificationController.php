@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Admin;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
 class VerificationController extends Controller
@@ -38,19 +39,35 @@ class VerificationController extends Controller
     public function codeVerify($id){
         return view('admin.auth.code-verification', ['userId' => Admin::findOrFail($id)]);
     }
-    public function verifiyingCode(Request $request, $id){
+    public function verifiyingCode(Request $request){
         $this->validate($request, [
             'token' => 'required',
         ]);
 
         $user = Admin::where('token', $request->token)->first();
         if($user){
-            return redirect()->route('change-password', ['id' => $user->id]);
+            return redirect()->route('vrfy-newPass', ['id' => $user->id]);
         }       
         return back()->with('failed', 'Wrong Verfication Code');
     }
 
-    public function newPassword(){
-        return view('admin.auth.change-password');
+    public function newPassword($id){
+        return view('admin.auth.change-password', ['userId' => Admin::findOrFail($id)]);
+    }
+
+    public function updatePassword(Request $request, $id){
+        $user = Admin::findOrFail($id);
+        $this->validate($request, [
+            'password' => 'required|same:password|min:6',
+        ]);
+        $userID = Admin::where('id', $user->id)->first();
+        if ($userID) {
+            // $userID['is_verified'] = 1;
+            $userID['token'] = '';
+            $userID['password'] = Hash::make($request->password);
+            $userID->save();
+            return redirect()->route('adminLog')->with('success', 'Success! password has been changed');
+        }
+        return back()->with('failed', 'Failed! something went wrong');
     }
 }
