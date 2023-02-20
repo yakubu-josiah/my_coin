@@ -49,4 +49,8 @@ class VerificationController extends Controller
         }       
         return back()->with('failed', 'Wrong Verfication Code');
     }
+
+    public function newPassword(){
+        return view('admin.auth.change-password');
+    }
 }

@@ -3,7 +3,7 @@
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\VerificationController;
 use Illuminate\Support\Facades\Route;
-
+use Laravel\Fortify\Http\Controllers\NewPasswordController;
 
 Route::group(['prefix' => 'admin'], function (){
     Route::controller(AdminController::class)->group(function () {
@@ -21,6 +21,8 @@ Route::group(['prefix' => 'admin/verification'], function(){
         Route::post('/email-verify/check-credentials', 'validateEmail')->name('vrfy-email');
         Route::get('/email-sent/code-verification/{id}', 'codeVerify')->name('vrfy-emailCode');
         Route::get('/email-sent/verifying/email-code', 'verifiyingCode')->name('vrfy-code');
+        Route::get('/password/change-new-password/', 'newPassword')->name('vrfy-newPass');
+        
     });
 });
 
