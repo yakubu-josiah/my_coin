@@ -11,7 +11,7 @@ use Laravel\Fortify\Contracts\CreatesNewUsers;
 use Laravel\Fortify\Contracts\RegisterResponse;
  
 
-class AdminController extends Controller
+class AuthController extends Controller
 {
     /**
      * The guard implementation.

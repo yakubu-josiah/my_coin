@@ -1,12 +1,12 @@
 <?php
 
-use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\VerificationController;
 use Illuminate\Support\Facades\Route;
 use Laravel\Fortify\Http\Controllers\NewPasswordController;
 
 Route::group(['prefix' => 'admin'], function (){
-    Route::controller(AdminController::class)->group(function () {
+    Route::controller(AuthController::class)->group(function () {
         Route::get('/login', 'create')->name('adminLog');
         Route::post('/login', 'store')->name('adminStr');
         Route::get('/sign-up', 'adminRegister')->name('adminReg');
