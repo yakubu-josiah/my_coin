@@ -29,7 +29,7 @@ Route::group(['prefix' => 'admin/verification'], function(){
 
 Route::middleware('admin:admin')->group(function (){
     Route::group(['prefix' => 'admin'], function (){
-        Route::controller(AdminController::class)->group(function(){
+        Route::controller(AuthController::class)->group(function(){
             Route::get('/dashboard', 'adminDash')->name('adminDash');
         });
     });
